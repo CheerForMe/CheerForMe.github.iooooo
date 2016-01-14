@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a26cff;
+  background: #61ffff;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2037,4 +2037,22 @@ body {
   .use-motion .site-search form {
     top: 0 !important;
   }
+}
+.one-column .header-inner {
+  width: 100%;
+  background-color: #000;
+}
+.brand {
+  background-color: #373737;
+}
+.site-subtitle {
+  color: #ccc;
+}
+.menu .menu-item a {
+  color: #fff;
+}
+.site-author-image {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
