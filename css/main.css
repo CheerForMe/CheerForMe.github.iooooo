@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d6fff4;
+  background: #6e4d69;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2075,4 +2075,12 @@ hr {
 }
 .tag-cloud a {
   color: #373737;
+}
+.DIY-disqus {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+#disqus_thread {
+  width: 90%;
+  margin: 0 auto;
 }
