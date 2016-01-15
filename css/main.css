@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #32ec2f;
+  background: #00e732;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2072,4 +2072,7 @@ hr {
 .posts-expand .post-eof {
   margin-top: 40px;
   margin-bottom: 30px;
+}
+.tag-cloud a {
+  color: #373737;
 }
