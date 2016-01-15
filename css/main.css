@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #61ffff;
+  background: #1bb617;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2038,6 +2038,12 @@ body {
     top: 0 !important;
   }
 }
+p {
+  margin-bottom: 10px;
+}
+ul {
+  margin-top: 0;
+}
 .one-column .header-inner {
   width: 100%;
   background-color: #000;
@@ -2055,4 +2061,8 @@ body {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
+}
+hr {
+  margin: 10px 0;
+  background-image: none;
 }
