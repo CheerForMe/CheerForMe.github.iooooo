@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,移动端," />
 
 
 
@@ -51,16 +51,19 @@
 
 
 
-<meta name="description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
+<meta name="description" content="由于手机系统的差异，有些css只在特定系统中才生效，所以需要用到判断手机系统来做细节上的调整。   
+1234567891011121314151617// 判断手机系统 var browser = &amp;#123;    versions:function()&amp;#123;        var u = navigator.userAgent,        app = navigator.appVe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的blog终于搭建完成啦！">
-<meta property="og:url" content="http://cheerforme.github.io/2016/01/12/my-first-blog/index.html">
+<meta property="og:title" content="JS判断手机系统">
+<meta property="og:url" content="http://cheerforme.github.io/2016/02/22/The judgment system of mobile phone/index.html">
 <meta property="og:site_name" content="Cheer For Me">
-<meta property="og:description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
-<meta property="og:updated_time" content="2016-01-12T03:52:21.330Z">
+<meta property="og:description" content="由于手机系统的差异，有些css只在特定系统中才生效，所以需要用到判断手机系统来做细节上的调整。   
+1234567891011121314151617// 判断手机系统 var browser = &amp;#123;    versions:function()&amp;#123;        var u = navigator.userAgent,        app = navigator.appVe">
+<meta property="og:updated_time" content="2016-02-22T11:01:47.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的blog终于搭建完成啦！">
-<meta name="twitter:description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
+<meta name="twitter:title" content="JS判断手机系统">
+<meta name="twitter:description" content="由于手机系统的差异，有些css只在特定系统中才生效，所以需要用到判断手机系统来做细节上的调整。   
+1234567891011121314151617// 判断手机系统 var browser = &amp;#123;    versions:function()&amp;#123;        var u = navigator.userAgent,        app = navigator.appVe">
 
 
 
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title> 我的blog终于搭建完成啦！ | Cheer For Me </title>
+  <title> JS判断手机系统 | Cheer For Me </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -222,7 +225,7 @@
             
             
               
-                我的blog终于搭建完成啦！
+                JS判断手机系统
               
             
           </h1>
@@ -231,11 +234,26 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-12T11:52:21+08:00" content="2016-01-12">
-              2016-01-12
+            <time itemprop="dateCreated" datetime="2016-02-22T19:01:47+08:00" content="2016-02-22">
+              2016-02-22
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -255,24 +273,36 @@
       
 
       
-        <span itemprop="articleBody"><p>hello，这是我的第一篇博客，写在blog搭建好的第二天。<br>在这感谢<a href="http://blog.hegang.me/" target="_blank" rel="external">刚哥</a>的悉心教导括弧笑。</p>
-</span>
+        <span itemprop="articleBody"><p>由于手机系统的差异，有些css只在特定系统中才生效，所以需要用到判断手机系统来做细节上的调整。   </p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断手机系统 </span></span><br><span class="line"><span class="keyword">var</span> browser = &#123;</span><br><span class="line">    versions:function()&#123;</span><br><span class="line">        <span class="keyword">var</span> <span class="keyword">u</span> = navigator.userAgent,</span><br><span class="line">        <span class="keyword">app</span> = navigator.appVersion;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            android:<span class="keyword">u</span>.indexOf(<span class="string">"Android"</span>) &gt; -1 || <span class="keyword">u</span>.indexOf(<span class="string">"Linux"</span>) &gt; -1,</span><br><span class="line">            iPhone:<span class="keyword">u</span>.indexOf(<span class="string">"iPhone"</span>) &gt; -1,</span><br><span class="line">            iPad:<span class="keyword">u</span>.indexOf(<span class="string">"iPad"</span>) &gt; -1,</span><br><span class="line">            iPod:<span class="keyword">u</span>.indexOf(<span class="string">"iPod"</span>) &gt; -1</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;(),</span><br><span class="line">    language:(navigator.browserLanguage || navigator.language).toLowerCase()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(browser.versions.iPhone || browser.versions.iPad || browser.versions.iPod)&#123;</span><br><span class="line">    这里写js</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/移动端/" rel="tag">#移动端</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/16/head-meta/" rel="next" title="head常用标签">
+                <i class="fa fa-chevron-left"></i> head常用标签
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/16/head-meta/" rel="prev" title="head常用标签">
-                head常用标签 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/02/22/iOS_css_filters/" rel="prev" title="backdrop-filter（仅iOS）">
+                backdrop-filter（仅iOS） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
