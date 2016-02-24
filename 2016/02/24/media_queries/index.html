@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,移动端," />
 
 
 
@@ -51,16 +51,31 @@
 
 
 
-<meta name="description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
+<meta name="description" content="PC显示器
+640px@media screen and (max-width:640px){}
+
+800px@media screen and (max-width:800px){}
+
+1024px@media screen and (max-width:1024px){}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的blog终于搭建完成啦！">
-<meta property="og:url" content="http://cheerforme.github.io/2016/01/12/my-first-blog/index.html">
+<meta property="og:title" content="Web常用媒体查询">
+<meta property="og:url" content="http://cheerforme.github.io/2016/02/24/media_queries/index.html">
 <meta property="og:site_name" content="Cheer For Me">
-<meta property="og:description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
-<meta property="og:updated_time" content="2016-01-12T03:52:21.330Z">
+<meta property="og:description" content="PC显示器
+640px@media screen and (max-width:640px){}
+
+800px@media screen and (max-width:800px){}
+
+1024px@media screen and (max-width:1024px){}">
+<meta property="og:updated_time" content="2016-02-24T08:23:09.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的blog终于搭建完成啦！">
-<meta name="twitter:description" content="hello，这是我的第一篇博客，写在blog搭建好的第二天。在这感谢刚哥的悉心教导括弧笑。">
+<meta name="twitter:title" content="Web常用媒体查询">
+<meta name="twitter:description" content="PC显示器
+640px@media screen and (max-width:640px){}
+
+800px@media screen and (max-width:800px){}
+
+1024px@media screen and (max-width:1024px){}">
 
 
 
@@ -72,7 +87,7 @@
   };
 </script>
 
-  <title> 我的blog终于搭建完成啦！ | Cheer For Me </title>
+  <title> Web常用媒体查询 | Cheer For Me </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -222,7 +237,7 @@
             
             
               
-                我的blog终于搭建完成啦！
+                Web常用媒体查询
               
             
           </h1>
@@ -231,11 +246,26 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-12T11:52:21+08:00" content="2016-01-12">
-              2016-01-12
+            <time itemprop="dateCreated" datetime="2016-02-24T16:23:09+08:00" content="2016-02-24">
+              2016-02-24
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -255,25 +285,102 @@
       
 
       
-        <span itemprop="articleBody"><p>hello，这是我的第一篇博客，写在blog搭建好的第二天。<br>在这感谢<a href="http://blog.hegang.me/" target="_blank" rel="external">刚哥</a>的悉心教导括弧笑。</p>
-</span>
+        <span itemprop="articleBody"><h1 id="PC_u663E_u793A_u5668"><a href="#PC_u663E_u793A_u5668" class="headerlink" title="PC显示器"></a>PC显示器</h1><hr>
+<h2 id="640px"><a href="#640px" class="headerlink" title="640px"></a>640px</h2><pre><code class="css">@<span class="keyword">media</span> screen and (max-width:<span class="number">640px</span>){}
+</code></pre>
+<h2 id="800px"><a href="#800px" class="headerlink" title="800px"></a>800px</h2><pre><code class="css">@<span class="keyword">media</span> screen and (max-width:<span class="number">800px</span>){}
+</code></pre>
+<h2 id="1024px"><a href="#1024px" class="headerlink" title="1024px"></a>1024px</h2><pre><code class="css">@<span class="keyword">media</span> screen and (max-width:<span class="number">1024px</span>){}
+</code></pre>
+<a id="more"></a>   
+<h1 id="u79FB_u52A8_u7AEF_u8BBE_u5907"><a href="#u79FB_u52A8_u7AEF_u8BBE_u5907" class="headerlink" title="移动端设备"></a>移动端设备</h1><hr>
+<h2 id="iPhone4S"><a href="#iPhone4S" class="headerlink" title="iPhone4S"></a>iPhone4S</h2><pre><code class="css"><span class="comment">/*横屏模式*/</span>
+@<span class="keyword">media</span> screen and (max-device-width:<span class="number">480px</span>){}   
+<span class="comment">/*竖屏模式*/</span>   
+@<span class="keyword">medis</span> screen and (max-device-width:<span class="number">320px</span>){}
+</code></pre>
+<h2 id="iPhone4"><a href="#iPhone4" class="headerlink" title="iPhone4"></a>iPhone4</h2><pre><code class="css">@<span class="keyword">media</span> only screen and (-webkit-min-device-pixel-ratio:<span class="number">1.5</span>),
+only screen and (min-device-pixel-ratio:<span class="number">1.5</span>){}
+</code></pre>
+<h2 id="iPhone5"><a href="#iPhone5" class="headerlink" title="iPhone5"></a>iPhone5</h2><pre><code class="css">@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">320px</span>) 
+and (max-device-width:<span class="number">568px</span>){}
+</code></pre>
+<h2 id="iPhone6_/_iPhone6+"><a href="#iPhone6_/_iPhone6+" class="headerlink" title="iPhone6 / iPhone6+"></a>iPhone6 / iPhone6+</h2><pre><code class="css"><span class="comment">/*竖屏*/</span>
+@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">375px</span>) and (max-device-width:<span class="number">667px</span>) and (orientation:portrait){} 
+
+<span class="comment">/*横屏*/</span>
+@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">375px</span>) and (max-device-width:<span class="number">667px</span>) and (orientation:landscape){}
+
+<span class="comment">/*6plus竖屏*/</span>
+@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">414px</span>) and (max-device-width:<span class="number">736px</span>) and (orientation:portrait){}
+
+<span class="comment">/*6+横屏*/</span>
+@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">414px</span>) and (max-device-width:<span class="number">736px</span>) and (orientation:landscape){} 
+
+<span class="comment">/*6、6+横竖屏通用*/</span>
+@<span class="keyword">media</span> only screen and (max-device-width:<span class="number">640px</span>),
+       only screen and (max-device-width:<span class="number">667px</span>),
+       only screen and (max-width:<span class="number">480px</span>){}
+
+<span class="comment">/*6、6+竖屏*/</span>
+@<span class="keyword">media</span> only screen and (max-device-width:<span class="number">640px</span>),
+       only screen and (max-device-width:<span class="number">667px</span>),
+       only screen and (max-width:<span class="number">480px</span>) and (orientation:portrait){}   
+
+<span class="comment">/*6、6+横屏*/</span>
+@<span class="keyword">media</span> only screen and (max-device-width:<span class="number">640px</span>),
+       only screen and (max-device-width:<span class="number">667px</span>),
+       only screen and (max-width:<span class="number">480px</span>) and (orientation:landscape){}
+</code></pre>
+<h1 id="u5E73_u677F_u7535_u8111"><a href="#u5E73_u677F_u7535_u8111" class="headerlink" title="平板电脑"></a>平板电脑</h1><hr>
+<h2 id="iPad_/_iPad2_/_iPad3"><a href="#iPad_/_iPad2_/_iPad3" class="headerlink" title="iPad / iPad2 / iPad3"></a>iPad / iPad2 / iPad3</h2><pre><code class="css"><span class="comment">/*横屏*/</span>
+@<span class="keyword">media</span> (max-device-width:<span class="number">1024px</span>) and (orientation:landscape){}   
+
+<span class="comment">/*竖屏*/</span>   
+@<span class="keyword">media</span> (max-device-width:<span class="number">768px</span>) and (orientation:portrait){}
+</code></pre>
+<h2 id="iPad_Mini"><a href="#iPad_Mini" class="headerlink" title="iPad Mini"></a>iPad Mini</h2><pre><code class="css">@<span class="keyword">media</span> only screen and (min-device-width:<span class="number">768px</span>) 
+                   and (max-device-width:<span class="number">1024px</span>) 
+                   and (-webkit-min-device-pixel-ratio:<span class="number">1</span>){}
+</code></pre>
+<h2 id="Samsung_Galaxy_Tab"><a href="#Samsung_Galaxy_Tab" class="headerlink" title="Samsung Galaxy Tab"></a>Samsung Galaxy Tab</h2><pre><code class="css"><span class="comment">/*横屏模式*/</span>
+@<span class="keyword">media</span> (max-device-width:<span class="number">1280px</span>) and (orientation:landscape){} 
+
+<span class="comment">/*竖屏模式*/</span>
+@<span class="keyword">media</span> (max-device-width:<span class="number">800px</span>) and (orientation:portrait){}
+</code></pre>
+<h2 id="BlackBerry_PlayBook"><a href="#BlackBerry_PlayBook" class="headerlink" title="BlackBerry PlayBook"></a>BlackBerry PlayBook</h2><pre><code class="css"><span class="comment">/*横屏模式*/</span>
+@<span class="keyword">media</span> (max-device-width:<span class="number">1024px</span>) and (orientation:landscape){} 
+
+<span class="comment">/*竖屏模式*/</span>
+@<span class="keyword">media</span> (max-device-width:<span class="number">600px</span>) and (orientation:portrait){}
+</code></pre>
+<h2 id=""><a href="#" class="headerlink" title=""></a> </h2></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/移动端/" rel="tag">#移动端</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/23/head-meta/" rel="next" title="head常用标签">
+                <i class="fa fa-chevron-left"></i> head常用标签
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/23/The judgment system of mobile phone/" rel="prev" title="JS判断手机系统">
-                JS判断手机系统 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,7 +494,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PC_u663E_u793A_u5668"><span class="nav-number">1.</span> <span class="nav-text">PC显示器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#640px"><span class="nav-number">1.1.</span> <span class="nav-text">640px</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#800px"><span class="nav-number">1.2.</span> <span class="nav-text">800px</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1024px"><span class="nav-number">1.3.</span> <span class="nav-text">1024px</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u79FB_u52A8_u7AEF_u8BBE_u5907"><span class="nav-number">2.</span> <span class="nav-text">移动端设备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone4S"><span class="nav-number">2.1.</span> <span class="nav-text">iPhone4S</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone4"><span class="nav-number">2.2.</span> <span class="nav-text">iPhone4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone5"><span class="nav-number">2.3.</span> <span class="nav-text">iPhone5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPhone6_/_iPhone6+"><span class="nav-number">2.4.</span> <span class="nav-text">iPhone6 / iPhone6+</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5E73_u677F_u7535_u8111"><span class="nav-number">3.</span> <span class="nav-text">平板电脑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iPad_/_iPad2_/_iPad3"><span class="nav-number">3.1.</span> <span class="nav-text">iPad / iPad2 / iPad3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iPad_Mini"><span class="nav-number">3.2.</span> <span class="nav-text">iPad Mini</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Samsung_Galaxy_Tab"><span class="nav-number">3.3.</span> <span class="nav-text">Samsung Galaxy Tab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BlackBerry_PlayBook"><span class="nav-number">3.4.</span> <span class="nav-text">BlackBerry PlayBook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">3.5.</span> <span class="nav-text"> </span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
