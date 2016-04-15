@@ -51,31 +51,31 @@
 
 
 
-<meta name="description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
+<meta name="description" content="$(document).click()在IOS失效
+简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
+相关文档：解决方案    
+取消移动端可点击元素的高亮背景色
+-webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
+移动端按">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用伪类:target实现选项卡效果">
-<meta property="og:url" content="http://cheerforme.github.io/2016/02/24/taeget_tab/index.html">
+<meta property="og:title" content="记录并感谢我涨的经验（持续更新）">
+<meta property="og:url" content="http://cheerforme.github.io/2016/04/15/Project_ experience/index.html">
 <meta property="og:site_name" content="Cheer For Me">
-<meta property="og:description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
-<meta property="og:updated_time" content="2016-02-24T10:32:46.255Z">
+<meta property="og:description" content="$(document).click()在IOS失效
+简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
+相关文档：解决方案    
+取消移动端可点击元素的高亮背景色
+-webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
+移动端按">
+<meta property="og:updated_time" content="2016-04-15T03:21:45.641Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用伪类:target实现选项卡效果">
-<meta name="twitter:description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
+<meta name="twitter:title" content="记录并感谢我涨的经验（持续更新）">
+<meta name="twitter:description" content="$(document).click()在IOS失效
+简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
+相关文档：解决方案    
+取消移动端可点击元素的高亮背景色
+-webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
+移动端按">
 
 
 
@@ -87,7 +87,7 @@
   };
 </script>
 
-  <title> 使用伪类:target实现选项卡效果 | Cheer For Me </title>
+  <title> 记录并感谢我涨的经验（持续更新） | Cheer For Me </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +237,7 @@
             
             
               
-                使用伪类:target实现选项卡效果
+                记录并感谢我涨的经验（持续更新）
               
             
           </h1>
@@ -246,8 +246,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-24T18:32:46+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-04-15T11:21:45+08:00" content="2016-04-15">
+              2016-04-15
             </time>
           </span>
 
@@ -285,46 +285,18 @@
       
 
       
-        <span itemprop="articleBody"><h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-control"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab1"</span>&gt;</span>tab1<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab2"</span>&gt;</span>tab2<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab3"</span>&gt;</span>tab3<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tabs"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab1"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab2"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab3"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-</code></pre>
-<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><pre><code class="css"><span class="selector-class">.tab-control</span> <span class="selector-tag">a</span>{
-    <span class="attribute">display</span>:inline-block;
-    <span class="attribute">text-decoration</span>:none;
-    <span class="attribute">color</span>:<span class="number">#FFF</span>;
-    <span class="attribute">height</span>:<span class="number">20px</span>;
-    <span class="attribute">width</span>:<span class="number">40px</span>;
-    <span class="attribute">text-align</span>:center;
-    <span class="attribute">line-height</span>:<span class="number">20px</span>;
-    <span class="attribute">background</span>:<span class="built_in">rgba</span>(<span class="number">70</span>,<span class="number">121</span>,<span class="number">189</span>,<span class="number">0.75</span>);
-}
-<span class="selector-class">.tab-control</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>{
-    <span class="attribute">background</span>:<span class="built_in">rgba</span>(<span class="number">70</span>,<span class="number">121</span>,<span class="number">189</span>,<span class="number">1</span>);
-}
-<span class="selector-class">.tabs</span>{
-    <span class="attribute">position</span>:relative;
-    <span class="attribute">border</span>:<span class="number">1px</span> solid red;
-    <span class="attribute">height</span>:<span class="number">200px</span>;
-    <span class="attribute">width</span>:<span class="number">135px</span>;
-    <span class="attribute">overflow</span>:hidden;
-}
-<span class="selector-class">.tab</span>{
-    <span class="attribute">height</span>:<span class="number">100%</span>;
-    <span class="attribute">width</span>:<span class="number">100%</span>;
-}
-<span class="selector-pseudo">:target</span>{
-    <span class="attribute">display</span>:block;
-}
-</code></pre>
-<h5 id="u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN"><a href="#u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN" class="headerlink" title="更多target的效果：MDN"></a>更多target的效果：<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3atarget" target="_blank" rel="external">MDN</a></h5></span>
+        <span itemprop="articleBody"><h3 id="24_28document_29-click_28_29_u5728IOS_u5931_u6548"><a href="#24_28document_29-click_28_29_u5728IOS_u5931_u6548" class="headerlink" title="$(document).click()在IOS失效"></a>$(document).click()在IOS失效</h3><hr>
+<p>简单粗暴的解决办法：<br><code>&lt;body style=&quot;cursor:pointer;&quot;&gt;</code>        </p>
+<p>相关文档：<a href="http://stackoverflow.com/questions/3705937/document-click-not-working-correctly-on-iphone-jquery" target="_blank" rel="external">解决方案</a>    </p>
+<h3 id="u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272"><a href="#u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272" class="headerlink" title="取消移动端可点击元素的高亮背景色"></a>取消移动端可点击元素的高亮背景色</h3><hr>
+<p><code>-webkit-tap-highlight-color:rgba(0,0,0,0.01);</code><br>0.01的透明度为让某些安卓设备也能正确隐藏高亮。   </p>
+<h3 id="u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762"><a href="#u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762" class="headerlink" title="移动端按钮fixed导致键盘弹出时按钮挡住页面"></a>移动端按钮fixed导致键盘弹出时按钮挡住页面</h3><hr>
+<p>解决思路：input在focus的时候，取消按钮的fixed   </p>
+<pre><code>$(*class*).focus(function(){
+    $(*class*).css({&quot;position&quot;:&quot;static&quot;,&quot;xxx&quot;:&quot;xxx&quot;});
+})
+</code></pre><h3 id="u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528"><a href="#u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528" class="headerlink" title="关于CSS选择器的使用"></a>关于CSS选择器的使用</h3><p>最近写新项目的时候，尝到甜头，比如<code>:nth-of-type()</code>多方便！结果，项目上线前页面的元素需要删减，瞬间苦逼需要重写样式。所以个人认为尽量减少使用这种在未来修改页面时灵活性不够的写法。</p>
+</span>
       
     </div>
 
@@ -343,17 +315,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/24/media_queries/" rel="next" title="Web常用媒体查询">
-                <i class="fa fa-chevron-left"></i> Web常用媒体查询
+              <a href="/2016/02/24/taeget_tab/" rel="next" title="使用伪类:target实现选项卡效果">
+                <i class="fa fa-chevron-left"></i> 使用伪类:target实现选项卡效果
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/15/Project_ experience/" rel="prev" title="记录并感谢我涨的经验（持续更新）">
-                记录并感谢我涨的经验（持续更新） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,7 +435,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN"><span class="nav-number">3.</span> <span class="nav-text">更多target的效果：MDN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#24_28document_29-click_28_29_u5728IOS_u5931_u6548"><span class="nav-number">1.</span> <span class="nav-text">$(document).click()在IOS失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272"><span class="nav-number">2.</span> <span class="nav-text">取消移动端可点击元素的高亮背景色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762"><span class="nav-number">3.</span> <span class="nav-text">移动端按钮fixed导致键盘弹出时按钮挡住页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528"><span class="nav-number">4.</span> <span class="nav-text">关于CSS选择器的使用</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
