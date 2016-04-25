@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3988af;
+  background: #ff65ff;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2037,6 +2037,13 @@ body {
   .use-motion .site-search form {
     top: 0 !important;
   }
+}
+b,
+strong {
+  color: #000;
+}
+ol li {
+  padding-left: 10px;
 }
 p {
   margin-bottom: 10px;
