@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2eff83;
+  background: #26826e;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2086,4 +2086,7 @@ hr {
 #disqus_thread {
   width: 700px;
   margin: 0 auto;
+}
+.highlight .line {
+  line-height: 1.8;
 }

@@ -1,0 +1,732 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript,前端," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="数据类型逻辑判断时，undefined相当于false。
+123typeof()    // 判断数据类型parseInt()  // 字符串 转换成 整数parseFloat()    // 字符串 转换成 浮点小数
+
+文本字符串的处理12345678var str = &quot;这是一篇博客&quot;;str.length()             // 获取字符串的长度str.charAt(1)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS基础">
+<meta property="og:url" content="http://cheerforme.github.io/2016/05/19/js/index.html">
+<meta property="og:site_name" content="Cheer For Me">
+<meta property="og:description" content="数据类型逻辑判断时，undefined相当于false。
+123typeof()    // 判断数据类型parseInt()  // 字符串 转换成 整数parseFloat()    // 字符串 转换成 浮点小数
+
+文本字符串的处理12345678var str = &quot;这是一篇博客&quot;;str.length()             // 获取字符串的长度str.charAt(1)">
+<meta property="og:updated_time" content="2016-05-19T06:28:34.128Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS基础">
+<meta name="twitter:description" content="数据类型逻辑判断时，undefined相当于false。
+123typeof()    // 判断数据类型parseInt()  // 字符串 转换成 整数parseFloat()    // 字符串 转换成 浮点小数
+
+文本字符串的处理12345678var str = &quot;这是一篇博客&quot;;str.length()             // 获取字符串的长度str.charAt(1)">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> JS基础 | Cheer For Me </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cheer For Me</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to my Blog.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JS基础
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-05-19T14:28:34+08:00" content="2016-05-19">
+              2016-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h3 id="u6570_u636E_u7C7B_u578B"><a href="#u6570_u636E_u7C7B_u578B" class="headerlink" title="数据类型"></a>数据类型</h3><p>逻辑判断时，<strong>undefined</strong>相当于false。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span>()    <span class="comment">// 判断数据类型</span></span><br><span class="line"><span class="built_in">parseInt</span>()  <span class="comment">// 字符串 转换成 整数</span></span><br><span class="line"><span class="built_in">parseFloat</span>()    <span class="comment">// 字符串 转换成 浮点小数</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u6587_u672C_u5B57_u7B26_u4E32_u7684_u5904_u7406"><a href="#u6587_u672C_u5B57_u7B26_u4E32_u7684_u5904_u7406" class="headerlink" title="文本字符串的处理"></a>文本字符串的处理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"这是一篇博客"</span>;</span><br><span class="line">str.length()             <span class="comment">// 获取字符串的长度</span></span><br><span class="line">str.charAt(<span class="number">1</span>)            <span class="comment">// 获取对应索引号的字符</span></span><br><span class="line">str.indexOf(<span class="string">"一"</span>)        <span class="comment">// 获取指定字符的索引号</span></span><br><span class="line">str.lastIndexOf(<span class="string">"博"</span>)    <span class="comment">// 从后往前获取指定字符的索引号</span></span><br><span class="line">str.substring(<span class="number">0</span>, <span class="number">2</span>)      <span class="comment">// 从指定范围截取字符串，参数：开始截取的索引号，结束的索引号(不包含)。</span></span><br><span class="line">str.replace(<span class="string">"一"</span>, <span class="string">"二"</span>)     <span class="comment">// 替换字符，参数：被替换的字符，新的字符</span></span><br><span class="line">str.split(<span class="string">"二"</span>, <span class="number">1</span>)         <span class="comment">// 字符串分隔，参数：指定的分隔位置，分割后的份数（可选）</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Array_u6570_u7EC4"><a href="#Array_u6570_u7EC4" class="headerlink" title="Array数组"></a>Array数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">arr.splice();    <span class="comment">// 从数组中添加/删除项目</span></span><br><span class="line">arr.length();    <span class="comment">// 获取数组的长度</span></span><br><span class="line">arr[<span class="number">1</span>];          <span class="comment">// 获得对应索引号的值</span></span><br><span class="line">arr.push();      <span class="comment">// 从数组的后面开始添加项目</span></span><br><span class="line">arr.unshift();   <span class="comment">// 从数组的前面开始添加项目</span></span><br><span class="line">arr.pop();       <span class="comment">// 删除数组的最后一个元素</span></span><br><span class="line">arr.shift();     <span class="comment">// 删除数组的第一个元素</span></span><br><span class="line"><span class="keyword">delete</span> arr[<span class="number">3</span>];   <span class="comment">// 删除数组里指定索引号的元素（不会影响数组长度，只会删除元素里面的值但不会删除元素；被删除的值返回undefined）</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u5224_u65AD"><a href="#u5224_u65AD" class="headerlink" title="判断"></a>判断</h3><p>逻辑判断符：<strong>&amp;&amp;于</strong>，<strong>||或</strong>，<strong>!非</strong></p>
+<h4 id="if_u5224_u65AD"><a href="#if_u5224_u65AD" class="headerlink" title="if判断"></a>if判断</h4><p>先判断条件对错，再决定要做的事</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件) &#123; </span><br><span class="line">    ... </span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="switch_u5224_u65AD"><a href="#switch_u5224_u65AD" class="headerlink" title="switch判断"></a>switch判断</h4><p>先判断条件对错，再决定要做的事</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>()&#123;</span><br><span class="line">    <span class="keyword">case</span> 条件<span class="number">1</span>:</span><br><span class="line">        ...;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> 条件<span class="number">2</span>:</span><br><span class="line">        ...;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:    <span class="comment">// 默认执行：当所有条件都不符合时执行</span></span><br><span class="line">        ...;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="while_u5FAA_u73AF"><a href="#while_u5FAA_u73AF" class="headerlink" title="while循环"></a>while循环</h4><p>重复去做要做的事</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">    i++;</span><br><span class="line">    <span class="keyword">if</span>(i % <span class="number">2</span> === <span class="number">0</span>) &#123;    <span class="comment">// 求余数，如果是偶数则进入下一次循环，如果不是，则执行打印。</span></span><br><span class="line">        <span class="keyword">continue</span>;        <span class="comment">// 跳过当前循环，进入下一次循环</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="for_u5FAA_u73AF"><a href="#for_u5FAA_u73AF" class="headerlink" title="for循环"></a>for循环</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u51FD_u6570function"><a href="#u51FD_u6570function" class="headerlink" title="函数function"></a>函数function</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">message</span>)</span>&#123;    <span class="comment">// 设置参数</span></span><br><span class="line">    alert(message);   <span class="comment">// 调用参数</span></span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="string">"您好"</span>);         <span class="comment">// 接受参数，并设置为：您好</span></span><br></pre></td></tr></table></figure>
+<p>函数外声明的变量：<strong>全局变量（函数内可调用）</strong></p>
+<p>函数内声明的变量：<strong>内部变量（函数外不可调用）</strong></p>
+<hr>
+<h3 id="object_u5BF9_u8C61"><a href="#object_u5BF9_u8C61" class="headerlink" title="object对象"></a>object对象</h3><p>属性property</p>
+<p>方法method</p>
+<p><strong>除了：数字、字符串、布尔值、undefined，其他都是对象</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建对象</span></span><br><span class="line"><span class="comment">// 方法1</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.a = <span class="string">"1"</span>;</span><br><span class="line">obj[<span class="string">"b"</span>] = <span class="string">"2"</span>;</span><br><span class="line"><span class="comment">// 方法2</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    a: <span class="string">"1"</span>,</span><br><span class="line">    b: <span class="string">"2"</span>    <span class="comment">// 对象的最后一组键值对，结尾不加“，”</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 访问属性</span></span><br><span class="line">obj.a;</span><br><span class="line">obj[<span class="string">"a"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象里的数组</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    artist: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line">&#125;</span><br><span class="line">obj.artist[<span class="number">0</span>];    <span class="comment">// 访问对应索引号的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 更新与删除对象里的属性</span></span><br><span class="line">obj.a = <span class="string">"999"</span>;    <span class="comment">// 更新值</span></span><br><span class="line"><span class="keyword">delete</span> obj.a;     <span class="comment">// 删除属性a</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象添加方法</span></span><br><span class="line">obj.as = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; <span class="keyword">this</span>.artist.length;i++)&#123;</span><br><span class="line">        <span class="built_in">document</span>.writhln(<span class="keyword">this</span>.artist[i]);    <span class="comment">// 在页面写入artist的值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">as</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环输出对象里的属性</span></span><br><span class="line"><span class="keyword">var</span> abc;</span><br><span class="line"><span class="keyword">for</span>(abc <span class="keyword">in</span> obj)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> obj[abc] != <span class="string">"function"</span>)&#123;    <span class="comment">// 判断数据类型，如果不是function，执行打印</span></span><br><span class="line">        <span class="built_in">console</span>.log(obj[abc]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 id 获取元素</span></span><br><span class="line"><span class="built_in">document</span>.getElementById();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过 html标签 获取元素，得到数组形式的值</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName();</span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName()[index];    <span class="comment">// 通过制定的索引号，获取对应的html标签</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取所有匹配的元素 返回节点列表 通过索引号访问</span></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">".a div"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取第一个匹配的元素</span></span><br><span class="line"><span class="built_in">document</span>.querySelector();</span><br></pre></td></tr></table></figure>
+<p>访问元素的属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">"a"</span>);</span><br><span class="line"></span><br><span class="line">a.nodeName;                               <span class="comment">// 获取元素的节点的名称</span></span><br><span class="line">a.innerText;                              <span class="comment">// 输出节点内的文本</span></span><br><span class="line">a.parentNode;                             <span class="comment">// 输出元素的父节点</span></span><br><span class="line">a.previousElementSibling;                 <span class="comment">// 获取当前节点的上一个兄弟节点</span></span><br><span class="line">a.nextElementSibling;                     <span class="comment">// 获取当前节点的下一个兄弟节点</span></span><br><span class="line">a.nextElementSibling.innerText;           <span class="comment">// 获取下一个兄弟节点的文本</span></span><br><span class="line">a.childNodes;                             <span class="comment">// 获取当前节点的所有的子节点（包含所有类型的节点，比如元素类型节点、文本类型节点）</span></span><br><span class="line">a.childElementCount;                      <span class="comment">// 获取当前节点的元素类型子节点的数量。</span></span><br><span class="line">a.firstElementChild;                      <span class="comment">// 获取当前节点的第一个元素类型子节点</span></span><br><span class="line">a.firstElementChild.innerText;            <span class="comment">// 获取点钱节点的第一个元素类型节点的文本。</span></span><br><span class="line">a.lastElementChild;                       <span class="comment">// 获取当前节点的最后一个元素类型子节点</span></span><br><span class="line">a.firstElementChild.innerText = <span class="string">"aaa"</span>;    <span class="comment">// 修改节点的文本</span></span><br></pre></td></tr></table></figure>
+<p>在文档中<strong>创建并插入新节点</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建元素类型节点</span></span><br><span class="line"><span class="built_in">document</span>.createElement(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建文本类型节点</span></span><br><span class="line"><span class="built_in">document</span>.createTextNode(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入</span></span><br><span class="line">a.appendChild();    <span class="comment">// 添加到节点的最后</span></span><br><span class="line">a.insertBefore();   <span class="comment">// 在指定位置插入节点，参数：插入的内容，位置</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除</span></span><br><span class="line">a.removeChild();    <span class="comment">// 删除子节点</span></span><br></pre></td></tr></table></figure>
+<p>练习：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    <span class="keyword">var</span> Li = <span class="built_in">document</span>.createElement(<span class="string">"li"</span>);    <span class="comment">// 创建元素节点：li</span></span><br><span class="line">    <span class="keyword">var</span> TexT = <span class="built_in">document</span>.createTextNode(<span class="string">"啊"</span>); <span class="comment">// 创建文本节点："啊"</span></span><br><span class="line">    </span><br><span class="line">    Li.appendChild(TexT);    <span class="comment">// 在元素节点Li中，插入文本子节点TexT</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">"ul"</span>)[<span class="number">0</span>].appendChild(Li);    <span class="comment">// 获取第一个ul标签，插入子节点Li</span></span><br><span class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">"ul"</span>)[<span class="number">0</span>].removeChild(Li);    <span class="comment">// 获取第一个ul标签，删除子节点Li</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> UL = <span class="built_in">document</span>.querySelector(<span class="string">"ul"</span>);</span><br><span class="line">    UL.insertBefore(Li,UL.firstChild);    <span class="comment">// 将Li作为第一个子节点，出入到UL</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> H3 = <span class="built_in">document</span>.createElement(<span class="string">"h3"</span>);    <span class="comment">// 新建一个元素类型节点h3</span></span><br><span class="line">    H3.innerHTML = <span class="string">"bbb"</span>;                     <span class="comment">// h3文本内容 </span></span><br><span class="line">    UL.parentNode.insertBefore(H3,UL.previousSibling);    <span class="comment">// 找到UL的父节点，在UL前插入h3作为UL的上一个兄弟元素</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u4E8B_u4EF6"><a href="#u4E8B_u4EF6" class="headerlink" title="事件"></a>事件</h3><p>变量.事件 = function(){…};</p>
+<p>添加事件监听器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">xxx.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>, <span class="title">boolean</span>);</span><br><span class="line">// 参数-1：事件--字符串类型</span><br><span class="line">// 参数-2：要执行的函数</span><br><span class="line">// 参数-3：事件的传播方式，布尔值，默认为<span class="title">false</span>；<span class="title">false</span>时：冒泡方式传播。<span class="title">true</span>时：捕获方式传播。</span><br><span class="line">// 冒泡方式：从内向外触发</span><br><span class="line">// 捕获方式：从外向内</span><br><span class="line"></span><br><span class="line">// 打印事件发生后返回的对象，返回的属性都可用：</span><br><span class="line"><span class="title">function</span> <span class="title">set</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event);</span><br><span class="line">&#125;</span><br><span class="line">xxx.addEventListener(<span class="string">"click"</span>, set, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">event.target    <span class="comment">// 返回事件的目标节点</span></span><br><span class="line">event.target.xxx    <span class="comment">// 返回事件的目标节点的对应属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 停止传播事件</span></span><br><span class="line">event.stopPropagation();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阻止默认事件的传播</span></span><br><span class="line">preventDefault();</span><br></pre></td></tr></table></figure></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/11/20_commonly_used_regular_expressions/" rel="next" title="常用正则表达式">
+                <i class="fa fa-chevron-left"></i> 常用正则表达式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/photo.jpg" alt="Li XiaoFeng" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Li XiaoFeng</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">个人博客 学习总结 知识管理</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u7C7B_u578B"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6587_u672C_u5B57_u7B26_u4E32_u7684_u5904_u7406"><span class="nav-number">2.</span> <span class="nav-text">文本字符串的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array_u6570_u7EC4"><span class="nav-number">3.</span> <span class="nav-text">Array数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5224_u65AD"><span class="nav-number">4.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if_u5224_u65AD"><span class="nav-number">4.1.</span> <span class="nav-text">if判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#switch_u5224_u65AD"><span class="nav-number">4.2.</span> <span class="nav-text">switch判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while_u5FAA_u73AF"><span class="nav-number">4.3.</span> <span class="nav-text">while循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for_u5FAA_u73AF"><span class="nav-number">4.4.</span> <span class="nav-text">for循环</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51FD_u6570function"><span class="nav-number">5.</span> <span class="nav-text">函数function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object_u5BF9_u8C61"><span class="nav-number">6.</span> <span class="nav-text">object对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">7.</span> <span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E8B_u4EF6"><span class="nav-number">8.</span> <span class="nav-text">事件</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+      <!-- <div class="DIY-disqus"> -->
+        <div id="disqus_thread"></div>
+      <!-- </div> -->
+    </main>
+    
+    
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li XiaoFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//cheerforme.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
