@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,移动端," />
+  <meta name="keywords" content="LocalStorage,web存储,前端," />
 
 
 
@@ -51,31 +51,37 @@
 
 
 
-<meta name="description" content="$(document).click()在IOS失效
-简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
-相关文档：解决方案    
-取消移动端可点击元素的高亮背景色
--webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
-移动端按">
+<meta name="description" content="web storage让应用在用户本地存储内容，这些内容是成对出现的：内容名称，内容值。
+web storage分为两个部分：
+
+Local Storage：本地存储空间，存储的数据在关掉浏览器后不会消失。
+Session Storage：连线时段存储空间，关掉浏览器会自动清除。
+
+
+Local Storage - 在浏览器中存储数据设置数据123localStorage.setItem(a,b)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录并感谢我涨的经验（持续更新）">
-<meta property="og:url" content="http://cheerforme.github.io/2016/04/15/Project_ experience/index.html">
+<meta property="og:title" content="LocalStorage基础操作">
+<meta property="og:url" content="http://cheerforme.github.io/2016/05/25/localStorage/index.html">
 <meta property="og:site_name" content="Cheer For Me">
-<meta property="og:description" content="$(document).click()在IOS失效
-简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
-相关文档：解决方案    
-取消移动端可点击元素的高亮背景色
--webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
-移动端按">
-<meta property="og:updated_time" content="2016-04-15T03:38:37.624Z">
+<meta property="og:description" content="web storage让应用在用户本地存储内容，这些内容是成对出现的：内容名称，内容值。
+web storage分为两个部分：
+
+Local Storage：本地存储空间，存储的数据在关掉浏览器后不会消失。
+Session Storage：连线时段存储空间，关掉浏览器会自动清除。
+
+
+Local Storage - 在浏览器中存储数据设置数据123localStorage.setItem(a,b)">
+<meta property="og:updated_time" content="2016-05-25T04:17:46.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记录并感谢我涨的经验（持续更新）">
-<meta name="twitter:description" content="$(document).click()在IOS失效
-简单粗暴的解决办法：&amp;lt;body style=&amp;quot;cursor:pointer;&amp;quot;&amp;gt;        
-相关文档：解决方案    
-取消移动端可点击元素的高亮背景色
--webkit-tap-highlight-color:rgba(0,0,0,0.01);0.01的透明度为让某些安卓设备也能正确隐藏高亮。   
-移动端按">
+<meta name="twitter:title" content="LocalStorage基础操作">
+<meta name="twitter:description" content="web storage让应用在用户本地存储内容，这些内容是成对出现的：内容名称，内容值。
+web storage分为两个部分：
+
+Local Storage：本地存储空间，存储的数据在关掉浏览器后不会消失。
+Session Storage：连线时段存储空间，关掉浏览器会自动清除。
+
+
+Local Storage - 在浏览器中存储数据设置数据123localStorage.setItem(a,b)">
 
 
 
@@ -87,7 +93,7 @@
   };
 </script>
 
-  <title> 记录并感谢我涨的经验（持续更新） | Cheer For Me </title>
+  <title> LocalStorage基础操作 | Cheer For Me </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +243,7 @@
             
             
               
-                记录并感谢我涨的经验（持续更新）
+                LocalStorage基础操作
               
             
           </h1>
@@ -246,8 +252,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-04-15T11:38:37+08:00" content="2016-04-15">
-              2016-04-15
+            <time itemprop="dateCreated" datetime="2016-05-25T12:17:46+08:00" content="2016-05-25">
+              2016-05-25
             </time>
           </span>
 
@@ -256,8 +262,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/LocalStorage/" itemprop="url" rel="index">
+                    <span itemprop="name">LocalStorage</span>
                   </a>
                 </span>
 
@@ -285,18 +291,36 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="24_28document_29-click_28_29_u5728IOS_u5931_u6548"><a href="#24_28document_29-click_28_29_u5728IOS_u5931_u6548" class="headerlink" title="$(document).click()在IOS失效"></a>$(document).click()在IOS失效</h3><hr>
-<p>简单粗暴的解决办法：<br><code>&lt;body style=&quot;cursor:pointer;&quot;&gt;</code>        </p>
-<p>相关文档：<a href="http://stackoverflow.com/questions/3705937/document-click-not-working-correctly-on-iphone-jquery" target="_blank" rel="external">解决方案</a>    </p>
-<h3 id="u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272"><a href="#u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272" class="headerlink" title="取消移动端可点击元素的高亮背景色"></a>取消移动端可点击元素的高亮背景色</h3><hr>
-<p><code>-webkit-tap-highlight-color:rgba(0,0,0,0.01);</code><br>0.01的透明度为让某些安卓设备也能正确隐藏高亮。   </p>
-<h3 id="u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762"><a href="#u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762" class="headerlink" title="移动端按钮fixed导致键盘弹出时按钮挡住页面"></a>移动端按钮fixed导致键盘弹出时按钮挡住页面</h3><hr>
-<p>解决思路：input在focus的时候，取消按钮的fixed   </p>
-<pre><code>$(*class*).focus(function(){
-    $(*class*).css({&quot;position&quot;:&quot;static&quot;,&quot;xxx&quot;:&quot;xxx&quot;});
-})
-</code></pre><h3 id="u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528"><a href="#u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528" class="headerlink" title="关于CSS选择器的使用"></a>关于CSS选择器的使用</h3><hr>
-<p>最近写新项目的时候，尝到甜头，比如<code>:nth-of-type()</code>多方便！结果，项目上线前页面的元素需要删减，瞬间苦逼需要重写样式。所以个人认为尽量减少使用这种在未来修改页面时灵活性不够的写法。</p>
+        <span itemprop="articleBody"><h3 id="web_storage"><a href="#web_storage" class="headerlink" title="web storage"></a>web storage</h3><p>让应用在用户本地存储内容，这些内容是成对出现的：内容名称，内容值。</p>
+<p><strong>web storage分为两个部分：</strong></p>
+<ul>
+<li>Local Storage：本地存储空间，<strong>存储的数据在关掉浏览器后不会消失</strong>。</li>
+<li>Session Storage：连线时段存储空间，<strong>关掉浏览器会自动清除</strong>。</li>
+</ul>
+<hr>
+<h3 id="Local_Storage_-__u5728_u6D4F_u89C8_u5668_u4E2D_u5B58_u50A8_u6570_u636E"><a href="#Local_Storage_-__u5728_u6D4F_u89C8_u5668_u4E2D_u5B58_u50A8_u6570_u636E" class="headerlink" title="Local Storage - 在浏览器中存储数据"></a>Local Storage - 在浏览器中存储数据</h3><h4 id="u8BBE_u7F6E_u6570_u636E"><a href="#u8BBE_u7F6E_u6570_u636E" class="headerlink" title="设置数据"></a>设置数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(a,b);    <span class="comment">// a：数据名称，b：值</span></span><br><span class="line">localStorage.a = b;    <span class="comment">// a：数据名称，b：值</span></span><br><span class="line"><span class="comment">// 重新设置一个数据的值时，如果和之前的值不同，会覆盖掉</span></span><br></pre></td></tr></table></figure>
+<h4 id="u83B7_u53D6_u6570_u636E"><a href="#u83B7_u53D6_u6570_u636E" class="headerlink" title="获取数据"></a>获取数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(a);    <span class="comment">// a:数据名称</span></span><br><span class="line">localStorage.length;    <span class="comment">// 返回 数据的总数量</span></span><br></pre></td></tr></table></figure>
+<h4 id="u5220_u9664_u6570_u636E"><a href="#u5220_u9664_u6570_u636E" class="headerlink" title="删除数据"></a>删除数据</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localStorage.removeItem(a);    <span class="comment">// a:数据名称</span></span><br><span class="line">localStorage.clear();    <span class="comment">// 清除所有数据</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="storage_u4E8B_u4EF6"><a href="#storage_u4E8B_u4EF6" class="headerlink" title="storage事件"></a>storage事件</h3><p>当存储区域发生变化时，会触发storage事件：设置、移除、清空数据时，都会触发事件。</p>
+<p>数据触发的当前窗口不会发生这个事件，在其他窗口会发生。前提是其他窗口可以访问到发生变化的窗口。</p>
+<p><strong>sessionStorage：</strong>同一个窗口里的框架发生变化时，才会触发storage事件。</p>
+<hr>
+<h3 id="localStorage_u4F5C_u7528_u57DF"><a href="#localStorage_u4F5C_u7528_u57DF" class="headerlink" title="localStorage作用域"></a>localStorage作用域</h3><p>作用域/有效的应用范围：</p>
+<ul>
+<li>取决于文档的来源</li>
+<li>同一个文档来源可以互相使用localStorage数据</li>
+<li>来源取决于：主机名、端口号、协议</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http://baidu.com    // 默认端口号80</span><br><span class="line">https://baidu.com   // 协议不同</span><br><span class="line">img.baidu.com       // 主机名不同</span><br><span class="line">baidu.com:8080      // 端口号不同</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u6570_u636E_u8F6C_u6362"><a href="#u6570_u636E_u8F6C_u6362" class="headerlink" title="数据转换"></a>数据转换</h3><h4 id="u8F6C_u6362_u6210_uFF1A_u6570_u5B57_u7C7B_u578B"><a href="#u8F6C_u6362_u6210_uFF1A_u6570_u5B57_u7C7B_u578B" class="headerlink" title="转换成：数字类型"></a>转换成：数字类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">localStorage.age = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">typeof</span>(localStorage.age);    <span class="comment">// 返回数据类型：string</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="built_in">parseInt</span>(localStorage.age);    <span class="comment">// 转换成整数数字类型</span></span><br></pre></td></tr></table></figure>
+<h4 id="u8F6C_u6362_u6210_uFF1A_u65E5_u671F"><a href="#u8F6C_u6362_u6210_uFF1A_u65E5_u671F" class="headerlink" title="转换成：日期"></a>转换成：日期</h4><p>需要先把时间和日期转换成标准的日期字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">localStorage.time = (<span class="keyword">new</span> <span class="built_in">Date</span>()).toUTCString();    <span class="comment">// 转换成标准的时间字符串</span></span><br><span class="line"><span class="keyword">var</span> times = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(localStorage.time));    <span class="comment">// Date.parse() 把表示时间的字符串解析成毫秒为单位的时间</span></span><br><span class="line">times.getMonth();       <span class="comment">// 返回 月份</span></span><br><span class="line">times.getFullYear();    <span class="comment">// 返回 年</span></span><br></pre></td></tr></table></figure>
+<h4 id="u8F6C_u6362_u6210_uFF1A_u5BF9_u8C61"><a href="#u8F6C_u6362_u6210_uFF1A_u5BF9_u8C61" class="headerlink" title="转换成：对象"></a>转换成：对象</h4><p><strong>先把对象转换成json形式再存储在localStorage，使用时再把json数据转换成js对象。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify();    <span class="comment">// 对象转换成json数据</span></span><br><span class="line"><span class="built_in">JSON</span>.parse();        <span class="comment">// json数据转换成对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> people = &#123; </span><br><span class="line">    name: <span class="string">"lxf"</span>,</span><br><span class="line">    gender: <span class="string">"男"</span></span><br><span class="line">&#125;;</span><br><span class="line">localStorage.peopleObj = <span class="built_in">JSON</span>.stringify(people);    <span class="comment">// 将people对象 转换成 json数据</span></span><br><span class="line"><span class="keyword">var</span> peoPle = <span class="built_in">JSON</span>.parse(localStorage.peopleObj);    <span class="comment">// 将json数据  转换成  js对象</span></span><br><span class="line">peoPle.name;    <span class="comment">// 访问对象的name</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u5C5E_u6027_uFF1Alength__u4E0E_key_28_29"><a href="#u5C5E_u6027_uFF1Alength__u4E0E_key_28_29" class="headerlink" title="属性：length 与 key()"></a>属性：length 与 key()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localStorage.length;    <span class="comment">// 返回项目的数量</span></span><br><span class="line">localStorage.key(n);    <span class="comment">// n：索引号，类似数组，从0开始计数。</span></span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -305,9 +329,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/LocalStorage/" rel="tag">#LocalStorage</a>
           
-            <a href="/tags/移动端/" rel="tag">#移动端</a>
+            <a href="/tags/web存储/" rel="tag">#web存储</a>
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
           
         </div>
       
@@ -316,17 +342,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/24/taeget_tab/" rel="next" title="使用伪类:target实现选项卡效果">
-                <i class="fa fa-chevron-left"></i> 使用伪类:target实现选项卡效果
+              <a href="/2016/05/19/js/" rel="next" title="JS基础">
+                <i class="fa fa-chevron-left"></i> JS基础
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/19/js_jq_code/" rel="prev" title="实用的JS/jQ代码片段">
-                实用的JS/jQ代码片段 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -440,7 +462,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#24_28document_29-click_28_29_u5728IOS_u5931_u6548"><span class="nav-number">1.</span> <span class="nav-text">$(document).click()在IOS失效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53D6_u6D88_u79FB_u52A8_u7AEF_u53EF_u70B9_u51FB_u5143_u7D20_u7684_u9AD8_u4EAE_u80CC_u666F_u8272"><span class="nav-number">2.</span> <span class="nav-text">取消移动端可点击元素的高亮背景色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u79FB_u52A8_u7AEF_u6309_u94AEfixed_u5BFC_u81F4_u952E_u76D8_u5F39_u51FA_u65F6_u6309_u94AE_u6321_u4F4F_u9875_u9762"><span class="nav-number">3.</span> <span class="nav-text">移动端按钮fixed导致键盘弹出时按钮挡住页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5173_u4E8ECSS_u9009_u62E9_u5668_u7684_u4F7F_u7528"><span class="nav-number">4.</span> <span class="nav-text">关于CSS选择器的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#web_storage"><span class="nav-number">1.</span> <span class="nav-text">web storage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Local_Storage_-__u5728_u6D4F_u89C8_u5668_u4E2D_u5B58_u50A8_u6570_u636E"><span class="nav-number">2.</span> <span class="nav-text">Local Storage - 在浏览器中存储数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u8BBE_u7F6E_u6570_u636E"><span class="nav-number">2.1.</span> <span class="nav-text">设置数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u83B7_u53D6_u6570_u636E"><span class="nav-number">2.2.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u5220_u9664_u6570_u636E"><span class="nav-number">2.3.</span> <span class="nav-text">删除数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#storage_u4E8B_u4EF6"><span class="nav-number">3.</span> <span class="nav-text">storage事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage_u4F5C_u7528_u57DF"><span class="nav-number">4.</span> <span class="nav-text">localStorage作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u8F6C_u6362"><span class="nav-number">5.</span> <span class="nav-text">数据转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u8F6C_u6362_u6210_uFF1A_u6570_u5B57_u7C7B_u578B"><span class="nav-number">5.1.</span> <span class="nav-text">转换成：数字类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u8F6C_u6362_u6210_uFF1A_u65E5_u671F"><span class="nav-number">5.2.</span> <span class="nav-text">转换成：日期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u8F6C_u6362_u6210_uFF1A_u5BF9_u8C61"><span class="nav-number">5.3.</span> <span class="nav-text">转换成：对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5C5E_u6027_uFF1Alength__u4E0E_key_28_29"><span class="nav-number">6.</span> <span class="nav-text">属性：length 与 key()</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
