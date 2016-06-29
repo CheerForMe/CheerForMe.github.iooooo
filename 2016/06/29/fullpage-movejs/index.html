@@ -1,0 +1,706 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript,动效," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="JS库引用及页面基础布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FullPage+Move.js实现整屏切换及动效">
+<meta property="og:url" content="http://cheerforme.github.io/2016/06/29/fullpage-movejs/index.html">
+<meta property="og:site_name" content="Cheer For Me">
+<meta property="og:description" content="JS库引用及页面基础布局">
+<meta property="og:updated_time" content="2016-06-29T11:05:19.169Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FullPage+Move.js实现整屏切换及动效">
+<meta name="twitter:description" content="JS库引用及页面基础布局">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> FullPage+Move.js实现整屏切换及动效 | Cheer For Me </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cheer For Me</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to my Blog.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                FullPage+Move.js实现整屏切换及动效
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-06-29T19:05:19+08:00" content="2016-06-29">
+              2016-06-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/动效/" itemprop="url" rel="index">
+                    <span itemprop="name">动效</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h3 id="JS_u5E93_u5F15_u7528_u53CA_u9875_u9762_u57FA_u7840_u5E03_u5C40"><a href="#JS_u5E93_u5F15_u7528_u53CA_u9875_u9762_u57FA_u7840_u5E03_u5C40" class="headerlink" title="JS库引用及页面基础布局"></a>JS库引用及页面基础布局</h3><a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">title</span>&gt;</span>fullpage<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width,initial-scale=1,user-scalable=no"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 引用fullpage的样式 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"jquery.fullpage.min.css"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 引用jQuery --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 引用fullpage的js --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"jquery.fullpage.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 引用move.js --&gt;</span></span><br><span class="line">	    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"move.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    	<span class="comment">&lt;!-- 关于延迟加载：img和video标签的src替换成data-src即可 --&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">&lt;!-- 页面基础布局 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"fullpage"</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 每一个section节点相当于一整屏 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section"</span>&gt;</span>页面1<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- active 设置当前页为打开时的首页 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section active"</span>&gt;</span>页面2<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section"</span>&gt;</span>页面3<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"section"</span>&gt;</span></span><br><span class="line">            	<span class="comment">&lt;!-- 横向滚动的轮播 每一个slide节点相当于一页 --&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slide"</span>&gt;</span>轮播1<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slide"</span>&gt;</span>轮播2<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"slide"</span>&gt;</span>轮播3<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">&lt;!-- 初始化fullpage --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">            $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            	$(<span class="string">".fullpage"</span>).fullpage();</span><br><span class="line">            &#125;)</span><br><span class="line">        </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="u914D_u7F6E_u9879_+__u56DE_u8C03_u51FD_u6570"><a href="#u914D_u7F6E_u9879_+__u56DE_u8C03_u51FD_u6570" class="headerlink" title="配置项 + 回调函数"></a>配置项 + 回调函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">".fullpage"</span>).fullpage(&#123;</span><br><span class="line">        <span class="comment">/****************** 配置项 ******************/</span></span><br><span class="line">        <span class="comment">// 设置section们的背景色</span></span><br><span class="line">        sectionsColor: [<span class="string">"black"</span>,<span class="string">"red"</span>,<span class="string">"orange"</span>,<span class="string">"yellow"</span>,<span class="string">"gray"</span>],</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置是否通过左右箭头来切换slide幻灯片 默认为true， false时左右箭头消失</span></span><br><span class="line">        controlArrows:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 每一页的内容是否垂直居中。默认为true</span></span><br><span class="line">        verticalCentered: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 字体是否随着窗口缩放而缩放，默认为false</span></span><br><span class="line">        resize: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置滚动速度，单位毫秒，默认700</span></span><br><span class="line">        scrollingSpeed: <span class="number">2000</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义锚点，默认值为[]空数组，锚点可以让用户快速前往指定位置</span></span><br><span class="line">        <span class="comment">// 锚点的定义顺序，应该和section的顺序相同</span></span><br><span class="line">        anchors:[<span class="string">"page1"</span>,<span class="string">"page2"</span>,<span class="string">"page3"</span>,<span class="string">"page4"</span>,<span class="string">"page5"</span>],</span><br><span class="line">        <span class="comment">// 绑定菜单，设定的相关属性与anchors的值对应后，菜单可以控制滚动，默认false</span></span><br><span class="line">        <span class="comment">// 可以设置为菜单的jquery选择器</span></span><br><span class="line">        menu: <span class="string">".fullpageMenu"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否显示导航，默认false</span></span><br><span class="line">        <span class="comment">// 如果设置为true，会显示小圆点作为导航</span></span><br><span class="line">        navigation: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 导航小圆点的位置，可以设置 left/right</span></span><br><span class="line">        navigationPosition: <span class="string">"right"</span>,</span><br><span class="line">        <span class="comment">// 导航小圆点的tooltips提示的设置，默认为[]空数组</span></span><br><span class="line">        <span class="comment">// 注意：按照顺序设置</span></span><br><span class="line">        navigationTooltips: [<span class="string">"page1"</span>,<span class="string">"page2"</span>,<span class="string">"page3"</span>,<span class="string">"page4"</span>,<span class="string">"page5"</span>],</span><br><span class="line">        <span class="comment">// 是否显示当前页面的导航的tooltips提示信息，默认false</span></span><br><span class="line">        showActiveTooltip: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否显示横向slide幻灯片的导航，默认dalse</span></span><br><span class="line">        slidesNavigation: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 横向slide幻灯片的导航的位置，默认bottom，可以设置：top/bottom</span></span><br><span class="line">        slidesNavPosition:<span class="string">"top"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否锁定锚链接 默认false，如果设置为true，则页面滚动时地址栏的锚链接不会发生变化</span></span><br><span class="line">        lockAnchors: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义section滚动的动画方式，默认easeInOutCubic</span></span><br><span class="line">        <span class="comment">// 如果修改此项，需要引入jquery.easings插件 或 jquery ui</span></span><br><span class="line">        easing: <span class="string">"easeInOutCubic"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否使用 CSS3 transforms来实现滚动效果，默认为true</span></span><br><span class="line">        <span class="comment">// 此配置项可以提高支持css3的设备/浏览器速度等</span></span><br><span class="line">        <span class="comment">// 如果不支持css3，会使用jquery替代css3实现效果</span></span><br><span class="line">        css3: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置：滚动到最顶部后，是否可以继续滚动到底部，默认false</span></span><br><span class="line">        loopTop: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置：滚动到最底部后，是否可以继续滚动到顶部，默认false</span></span><br><span class="line">        loopBottom: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置：横向slide幻灯片是否循环滚动，默认true</span></span><br><span class="line">        loopHorizontal: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置：是否使用插件的滚动方式，默认true</span></span><br><span class="line">        <span class="comment">// 如果设置false，则会出现浏览器自带滚动条，将不会按页滚动，而是按照滚动条的默认行为滚动</span></span><br><span class="line">        autoScrolling: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 是否记录滚动历史，默认true, 可以记录页面滚动的历史,可以通过浏览器的前进后退来滚动页面</span></span><br><span class="line">        <span class="comment">// 如果autoScrolling:false,那么这个配置也将被关闭</span></span><br><span class="line">        recordHistory: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置：是否显示浏览器自带滚动条 默认false</span></span><br><span class="line">        <span class="comment">// 如果设置true，浏览器自带滚动条会出现，页面滚动时还是按页滚动，但是滚动条的默认行为也有效</span></span><br><span class="line">        scrollBar: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置每一个section顶部/底部的padding，默认0</span></span><br><span class="line">        <span class="comment">// 如果需要一个固定在顶部/底部的导航时，可以设置此项</span></span><br><span class="line">        paddingTop: <span class="number">10</span>,</span><br><span class="line">        paddingBottom:<span class="number">0</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 固定的元素，默认null，需要配置一个jquery选择器 页面滚动时，此元素固定不动</span></span><br><span class="line">        fixedElements: <span class="string">".header"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否可以用键盘的方向键滚动页面  默认true</span></span><br><span class="line">        keyboardScrolling: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在移动设备中滑动页面的敏感性，默认5，按百分比来衡量，最大100，越大越难滑动</span></span><br><span class="line">        touchSensitivity: <span class="number">5</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 是否循环滚动，默认false</span></span><br><span class="line">        <span class="comment">// 如果设置为true，页面会循环滚动，而不是像loopTop/loopBottom那样出现跳动</span></span><br><span class="line">        <span class="comment">// 该属性和loopTop/loopBottom不兼容，不可同时设置！</span></span><br><span class="line">        continuousVertical: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 锚点是否可以控制滚动动画，默认true</span></span><br><span class="line">        <span class="comment">// 如果设置为false，通过锚点定位到页面时不再有动画效果</span></span><br><span class="line">        animateAnchor: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 内容超过满屏后是否显示滚动条，默认false</span></span><br><span class="line">        <span class="comment">// 如果设置为true，则会显示滚动条</span></span><br><span class="line">        <span class="comment">// 需要jquery.slimscroll插件配合    slimscroll插件主要用于模拟传统的浏览器滚动条</span></span><br><span class="line">        scrollOverflow: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// section选择器，默认为.section</span></span><br><span class="line">        sectionSelector: <span class="string">".section"</span>,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// slide的选择器，默认为.slide</span></span><br><span class="line">        slideSelector: <span class="string">".slide"</span>,</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/****************** 回调函数 ******************/</span></span><br><span class="line">        <span class="comment">// 滚动到某一section，且滚动结束后会触发一次此回调函数</span></span><br><span class="line">        <span class="comment">// 参数anchorLink：锚链接名称</span></span><br><span class="line">        <span class="comment">// 参数index：序号，从1开始计算</span></span><br><span class="line">        afterLoad: <span class="function"><span class="keyword">function</span>(<span class="params">anchorLink,index</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"afterLoad："</span> + <span class="string">"anchorLink="</span> + anchorLink + <span class="string">"___index="</span> + index);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 在离开一个section时，会触发一次此回调函数</span></span><br><span class="line">        <span class="comment">// 参数index：表示离开的页面的序号，从1开始计算</span></span><br><span class="line">        <span class="comment">// 参数nextIndex：表示滚动到的目标页面的序号，从1开始计算</span></span><br><span class="line">        <span class="comment">// 参数direction：判断往上滚动还是往下滚动，值是up 或 down</span></span><br><span class="line">        <span class="comment">// 通过return false;可以取消滚动</span></span><br><span class="line">        onLeave: <span class="function"><span class="keyword">function</span>(<span class="params">index, nextIndex, direction</span>)</span>&#123;</span><br><span class="line">            <span class="comment">// return false;</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"onLeave："</span> + <span class="string">"index："</span> + index + <span class="string">"___nextIndex："</span> + nextIndex + <span class="string">"___direction："</span> + direction);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 页面初始化完成后的回调函数</span></span><br><span class="line">        afterRender: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"afterRender"</span>);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 浏览器窗口尺寸改变后的回调函数</span></span><br><span class="line">        afterResize: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"afterResize"</span>);</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 滚动到某一幻灯片后的回调函数，与afterLoad类似</span></span><br><span class="line">        <span class="comment">// 参数anchorLink：锚链接名称</span></span><br><span class="line">        <span class="comment">// 参数index：序号，从1开始计算</span></span><br><span class="line">        <span class="comment">// 参数slideIndex：幻灯片序号</span></span><br><span class="line">        <span class="comment">// 参数direction：方向</span></span><br><span class="line">        afterSlideLoad: <span class="function"><span class="keyword">function</span>(<span class="params">anchorLink, index, slideIndex, direction</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"afterSlideLoad:"</span> + anchorLink, index, slideIndex, direction);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="u65B9_u6CD5"><a href="#u65B9_u6CD5" class="headerlink" title="方法"></a>方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 书写方式： $.fn.fullpage.xxx()</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 向上滚动一页</span></span><br><span class="line">$.fn.fullpage.moveSectionUp();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向下滚动一页</span></span><br><span class="line">$.fn.fullpage.moveSectionDown();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 滚动到第几页、第几个幻灯片，</span></span><br><span class="line"><span class="comment">// 页面从 1 开始</span></span><br><span class="line"><span class="comment">// 幻灯片从 0 开始</span></span><br><span class="line">$.fn.fullpage.moveTo(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 滚动到第几页，和moveTo一样，但是没有动画效果</span></span><br><span class="line">$.fn.fullpage.silentMoveTo(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 幻灯片向右滚动</span></span><br><span class="line">$.fn.fullpage.moveSlideRight();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 幻灯片向左滚动</span></span><br><span class="line">$.fn.fullpage.moveSlideLeft();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 动态设置 autoScrolling   布尔值</span></span><br><span class="line">$.fn.fullpage.setAutoScrolling(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 动态设置lockAnchors    布尔值</span></span><br><span class="line">$.fn.fullpage.setLockAnchors(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 动态设置recordHistory    布尔值</span></span><br><span class="line">$.fn.fullpage.setRecordHistory(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 动态设置scrollingSpeed    毫秒</span></span><br><span class="line">$.fn.fullpage.setScrollingSpeed(<span class="number">50000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加/删除 鼠标滚轮/滑动控制</span></span><br><span class="line"><span class="comment">// 第一个参数为true时 启用    false时 禁用</span></span><br><span class="line"><span class="comment">// 第二个参数是方向，取值包含：all、up、down、left、right，可以使用多个，逗号分隔</span></span><br><span class="line">$.fn.fullpage.setAllowScrolling(<span class="literal">false</span>,<span class="string">"up"</span>,<span class="string">"left"</span>);    <span class="comment">// 禁用向上、向左的滚动/滑动</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 销毁fullpage特效</span></span><br><span class="line"><span class="comment">// 值type，可以不写，或者使用all，不写type时fullpage给页面添加的效果失效，all时样式、html、效果全都销毁</span></span><br><span class="line">$.fn.fullpage.destroy(<span class="string">"all"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重新更新页面和尺寸，用于通过ajax请求后改变了页面结构之后，重建效果</span></span><br><span class="line">$.fn.fullpage.reBulid();</span><br></pre></td></tr></table></figure>
+<h3 id="Move-js"><a href="#Move-js" class="headerlink" title="Move.js"></a>Move.js</h3><p><a href="http://visionmedia.github.io/move.js/" target="_blank" rel="external">Move.js官网</a></p>
+<p><a href="https://segmentfault.com/a/1190000000443523" target="_blank" rel="external">使用Move.js创建CSS3动画 – 王焕亮</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/动效/" rel="tag">#动效</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/27/ajax/" rel="next" title="ajax基础">
+                <i class="fa fa-chevron-left"></i> ajax基础
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/photo.jpg" alt="Li XiaoFeng" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Li XiaoFeng</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">个人博客 学习总结 知识管理</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS_u5E93_u5F15_u7528_u53CA_u9875_u9762_u57FA_u7840_u5E03_u5C40"><span class="nav-number">1.</span> <span class="nav-text">JS库引用及页面基础布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u914D_u7F6E_u9879_+__u56DE_u8C03_u51FD_u6570"><span class="nav-number">2.</span> <span class="nav-text">配置项 + 回调函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u65B9_u6CD5"><span class="nav-number">3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Move-js"><span class="nav-number">4.</span> <span class="nav-text">Move.js</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+      <!-- <div class="DIY-disqus"> -->
+        <div id="disqus_thread"></div>
+      <!-- </div> -->
+    </main>
+    
+    
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li XiaoFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//cheerforme.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
