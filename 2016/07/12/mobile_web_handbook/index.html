@@ -1,0 +1,842 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端,移动端," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="第一章 移动世界运营商运营商补贴
+Web开发人员要记住的就是：通过决定卖给不知情的消费者哪种手机，运营商就能够影响移动浏览器市场，因为那些设备的内置浏览器将获得更多的市场份额。因此，跟踪运营商目前的偏好很重要。
+
+
+第四章 视口三个视口布局视口
+在手机上，视口与移动端浏览器屏幕宽度不再相关联，而是完全独立的。我们称它为布局视口：CSS布局会根据它来计算，并被它约束。
+
+在手机上，为了容纳为桌面浏览">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动Web手册笔记">
+<meta property="og:url" content="http://cheerforme.github.io/2016/07/12/mobile_web_handbook/index.html">
+<meta property="og:site_name" content="Cheer For Me">
+<meta property="og:description" content="第一章 移动世界运营商运营商补贴
+Web开发人员要记住的就是：通过决定卖给不知情的消费者哪种手机，运营商就能够影响移动浏览器市场，因为那些设备的内置浏览器将获得更多的市场份额。因此，跟踪运营商目前的偏好很重要。
+
+
+第四章 视口三个视口布局视口
+在手机上，视口与移动端浏览器屏幕宽度不再相关联，而是完全独立的。我们称它为布局视口：CSS布局会根据它来计算，并被它约束。
+
+在手机上，为了容纳为桌面浏览">
+<meta property="og:updated_time" content="2016-04-25T07:00:41.896Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动Web手册笔记">
+<meta name="twitter:description" content="第一章 移动世界运营商运营商补贴
+Web开发人员要记住的就是：通过决定卖给不知情的消费者哪种手机，运营商就能够影响移动浏览器市场，因为那些设备的内置浏览器将获得更多的市场份额。因此，跟踪运营商目前的偏好很重要。
+
+
+第四章 视口三个视口布局视口
+在手机上，视口与移动端浏览器屏幕宽度不再相关联，而是完全独立的。我们称它为布局视口：CSS布局会根据它来计算，并被它约束。
+
+在手机上，为了容纳为桌面浏览">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> 移动Web手册笔记 | Cheer For Me </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cheer For Me</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to my Blog.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                移动Web手册笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-07-12T15:33:46+08:00" content="2016-07-12">
+              2016-07-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="u7B2C_u4E00_u7AE0__u79FB_u52A8_u4E16_u754C"><a href="#u7B2C_u4E00_u7AE0__u79FB_u52A8_u4E16_u754C" class="headerlink" title="第一章 移动世界"></a>第一章 移动世界</h1><h2 id="u8FD0_u8425_u5546"><a href="#u8FD0_u8425_u5546" class="headerlink" title="运营商"></a>运营商</h2><h3 id="u8FD0_u8425_u5546_u8865_u8D34"><a href="#u8FD0_u8425_u5546_u8865_u8D34" class="headerlink" title="运营商补贴"></a>运营商补贴</h3><ul>
+<li>Web开发人员要记住的就是：<strong>通过决定卖给不知情的消费者哪种手机，运营商就能够影响移动浏览器市场，因为那些设备的内置浏览器将获得更多的市场份额。因此，跟踪运营商目前的偏好很重要。</strong></li>
+</ul>
+<hr>
+<h1 id="u7B2C_u56DB_u7AE0__u89C6_u53E3"><a href="#u7B2C_u56DB_u7AE0__u89C6_u53E3" class="headerlink" title="第四章 视口"></a>第四章 视口</h1><h2 id="u4E09_u4E2A_u89C6_u53E3"><a href="#u4E09_u4E2A_u89C6_u53E3" class="headerlink" title="三个视口"></a>三个视口</h2><h3 id="u5E03_u5C40_u89C6_u53E3"><a href="#u5E03_u5C40_u89C6_u53E3" class="headerlink" title="布局视口"></a>布局视口</h3><ul>
+<li><p><strong>在手机上，视口与移动端浏览器屏幕宽度不再相关联，而是完全独立的</strong>。我们称它为<strong>布局视口</strong>：CSS布局会根据它来计算，并被它约束。</p>
+</li>
+<li><p>在手机上，为了容纳为桌面浏览器设计的网站，默认的布局视口宽度远大于屏幕的宽度。</p>
+</li>
+</ul>
+<h3 id="u89C6_u89C9_u89C6_u53E3"><a href="#u89C6_u89C9_u89C6_u53E3" class="headerlink" title="视觉视口"></a>视觉视口</h3><ul>
+<li><strong>它是用户正在看到的网站的区域。用户可以通过缩放来操作视觉视口，同时不会影响布局视口，布局视口仍保持在原来的宽度。</strong></li>
+<li><strong>视觉视口与设备屏幕一样宽，并且它的CSS像素的数量会随着用户的缩放而改变。</strong></li>
+</ul>
+<h3 id="u7406_u60F3_u89C6_u53E3"><a href="#u7406_u60F3_u89C6_u53E3" class="headerlink" title="理想视口"></a>理想视口</h3><ul>
+<li><strong>它是对设备来说最理想的布局视口尺寸。</strong></li>
+<li><strong>显示在理想视口中的的网站拥有最理想的浏览和阅读宽度，用户刚进入页面时也不再需要缩放。</strong></li>
+<li><strong>只有当网站是为手机准备的时候才应该使用理想视口。</strong></li>
+<li>只有<strong>当你主动地往页面里添加meta视口标签时理想视口才会生效</strong>。如果没有meta视口标签的声明，那么布局视口将会维持它的默认宽度。</li>
+<li><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"device"</span> <span class="attribute">content</span>=<span class="value">"width=device-width"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+告诉浏览器：布局视口的宽度应该与理想视口的宽度一致。</li>
+</ul>
+<h3 id="u54EA_u4E00_u4E2A_u89C6_u53E3"><a href="#u54EA_u4E00_u4E2A_u89C6_u53E3" class="headerlink" title="哪一个视口"></a>哪一个视口</h3><ol>
+<li>在<strong>桌面浏览器</strong>中，<strong>浏览器窗口就是约束你的CSS布局的视口（又称为初始包含块）。它也决定了用户可以看到什么</strong>。</li>
+<li><strong>在手机上，桌面视口被拆分成了两个：布局视口会限制你的CSS布局，视觉视口会决定用户看到什么。</strong></li>
+<li><strong>移动浏览器还有一个理想视口，它是对于特定设备上的特定浏览器的布局视口的一个理想尺寸。</strong></li>
+<li>可以把<strong>布局视口的尺寸设置为理想视口</strong>。实际上，<strong>这就是响应式设计的基础</strong>。</li>
+</ol>
+<h3 id="u89E3_u9898"><a href="#u89E3_u9898" class="headerlink" title="解题"></a>解题</h3><ol>
+<li><p><code>position:fixed;</code><br>答：定位相对于布局视口。（后续有作者答案时修改）</p>
+</li>
+<li><p>vw和vh单位是相对视口的百分比：<code>width:25vw</code>意味着元素的宽度是视口宽度的25%。<br>答：vw和vh相对于理想视口。（后续有作者答案时修改）</p>
+</li>
+</ol>
+<h2 id="u7F29_u653E"><a href="#u7F29_u653E" class="headerlink" title="缩放"></a>缩放</h2><ul>
+<li>缩放会影响桌面和手机的（视觉）视口的尺寸。</li>
+<li>放大使视觉视口变得更小，因为屏幕上显示的CSS像素更少了；</li>
+<li>缩小会让视觉视口更大，因为屏幕上的CSS像素更多了。</li>
+<li>因此缩放程度和视觉视口的大小是逆相关的：放得越大，视觉视口就越小。</li>
+</ul>
+<p><strong>桌面和手机的区别：手机上布局视口不会被缩放影响，但在桌面上布局视口和视觉视口是相同的，不可能在改变其中一个视口的时候不改变另外一个。</strong></p>
+<h3 id="u7981_u6B62_u7F29_u653E"><a href="#u7981_u6B62_u7F29_u653E" class="headerlink" title="禁止缩放"></a>禁止缩放</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5206_u8FA8_u7387"><a href="#u5206_u8FA8_u7387" class="headerlink" title="分辨率"></a>分辨率</h2><h3 id="u7269_u7406_u5206_u8FA8_u7387"><a href="#u7269_u7406_u5206_u8FA8_u7387" class="headerlink" title="物理分辨率"></a>物理分辨率</h3><ul>
+<li>所有屏幕都有物理分辨率。</li>
+<li>像素的数量 除以 屏幕的以英寸为单位的宽度 = 设备每英寸的点数（DPI）。</li>
+<li>每英寸内的像素数量越多越好，因为这意味着画面会更清晰。</li>
+<li>JavaScript无法获取设备的物理尺寸。</li>
+</ul>
+<h3 id="u8BBE_u5907_u50CF_u7D20_u6BD4"><a href="#u8BBE_u5907_u50CF_u7D20_u6BD4" class="headerlink" title="设备像素比"></a>设备像素比</h3><ul>
+<li>JavaScript有<code>window.devicePixelRatio</code></li>
+<li>CSS有<code>device-pixel-ratio</code>（基于WebKit的浏览器）。</li>
+<li>CSS还有分辨率（所有浏览器都支持）的媒体查询。</li>
+<li>以上代码都和物理像素无关。</li>
+<li>它们为你提供了设备像素个数和理想视口的比，称为设备像素比（Device Pixel Ratio，简称DPR）。</li>
+<li>早期iPhone的设备宽度是320个物理像素，理想视口的宽度也是320个像素，所以设备像素比（DPR）是1。</li>
+<li>后来iPhone的宽度变成640个设备像素，而他们的理想视口宽度仍为320个像素，因此DPR变成2。</li>
+<li>DPR不一定是整数。</li>
+</ul>
+<h3 id="dppx_u548Cdpi"><a href="#dppx_u548Cdpi" class="headerlink" title="dppx和dpi"></a>dppx和dpi</h3><ul>
+<li>JavaScript中的<code>window.devicePixelRatio</code>和媒体查询的<code>device-pixel-ratio</code>的单位都是dppx。</li>
+<li>dppx：每一个像素的点数。</li>
+<li><p>实际上，不允许在dppx后面添加单位。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript正确书写方式</span></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.devicePixelRatio &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">  <span class="comment">// DPR大于等于2时生效</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// CSS正确书写方式</span><br><span class="line">@media all and (-webkit-min-device-pixel-ratio: 2)&#123;</span><br><span class="line">  // DPR大于等于2时生效</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><strong>为了兼容IE11及以下版本浏览器，我们必须使用dpi单位来代替。</strong></li>
+<li><p><strong>一英寸对应了CSS中的96个像素，所以1dppx等于96dpi。</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 媒体查询 兼容性写法</span><br><span class="line">@media all and ((-webkit-min-device-pixel-ratio: 2),(min-resolution:192dpi))&#123;</span><br><span class="line">  // DPR大于等于2时生效</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="meta_u89C6_u53E3"><a href="#meta_u89C6_u53E3" class="headerlink" title="meta视口"></a>meta视口</h2><ul>
+<li><strong>meta</strong>视口标签<strong>存在的主要目的</strong>是<strong>让布局视口的尺寸和理想视口的尺寸匹配</strong>。</li>
+<li>由Apple发明，其他手机和平板复制了它的大部分内容。</li>
+<li><strong>桌面浏览器不支持也不需要，因为它们没有理想视口的概念。</strong></li>
+<li><p>书写方式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"name=value,name=value"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每一个名/值对都是一个给浏览器发号命令的指令：</p>
+<ol>
+<li>width：设置布局视口的宽度为特定的值。</li>
+<li>init-scale：设置页面的初始缩放程度和布局视口的宽度。</li>
+<li>minimum-scale：设置了最小缩放程度（用户可缩小的程度）。</li>
+<li>maximum-scale：设置了最大缩放程度（用户可放大的程度）。</li>
+<li>user-scalable：是否阻止用户进行缩放。</li>
+</ol>
+</li>
+</ul>
+<h3 id="width"><a href="#width" class="headerlink" title="width"></a>width</h3><ul>
+<li><p>把布局视口的尺寸设为一个理想的值：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使布局视口在任何情况下宽度都是400px：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=400"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="initial-scale"><a href="#initial-scale" class="headerlink" title="initial-scale"></a>initial-scale</h3><ul>
+<li>设置：页面的初始缩放程度。</li>
+<li>1代表100%，2代表200%，以此类推。</li>
+<li><strong>缩放程度是根据理想视口来计算的。</strong></li>
+<li><strong>缩放程度 与 视觉视口的宽度是逆相关的！</strong><br><strong>越高的缩放程度意味着视觉视口越小。</strong></li>
+</ul>
+<h3 id="u5B8C_u7F8E_u7684meta_u89C6_u53E3"><a href="#u5B8C_u7F8E_u7684meta_u89C6_u53E3" class="headerlink" title="完美的meta视口"></a>完美的meta视口</h3><ul>
+<li>safari：当设置<code>initial-scale=1</code>时，理想视口的尺寸会随着屏幕的旋转而改变。<br>竖屏：布局视口320px<br>横屏：布局视口480px</li>
+<li>IE10相反：<code>initial-scale=1</code>时，它在横屏模式下宽度也保持320px，但是<code>width=device-width</code>时他会从320px变为480px。</li>
+<li>兼容写法：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=device-width,initial-scale=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="u5E03_u5C40_u89C6_u53E3_u7684_u6700_u5C0F_u5BBD_u5EA6"><a href="#u5E03_u5C40_u89C6_u53E3_u7684_u6700_u5C0F_u5BBD_u5EA6" class="headerlink" title="布局视口的最小宽度"></a>布局视口的最小宽度</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span> <span class="attribute">content</span>=<span class="value">"width=400,initial-scale=1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>以上代码，告诉浏览器，把布局视口的宽度设为400px，然后再把它设为理想视口的宽度。</li>
+<li>结果：<br>所有浏览器反应一致：它们选择了每个方向最大的尺寸。</li>
+<li>早期iPhone的竖屏模式下的布局视口宽度是400px（原始320和设定的400中，取最大的值）；</li>
+<li>横屏模式下是480px（原始480和设定的400，取最大的值）。</li>
+</ul>
+<h3 id="minimum-scale_u548Cmaximum-scale"><a href="#minimum-scale_u548Cmaximum-scale" class="headerlink" title="minimum-scale和maximum-scale"></a>minimum-scale和maximum-scale</h3><ul>
+<li>设置缩放程度的最小值和最大值。</li>
+<li>没有这些指令的时候，浏览器允许用户的缩放级别达到5（20%~500%）。</li>
+<li>有这些指令的时候，范围可扩大到10（10%~1000%）。</li>
+<li>更高的缩放程度不被支持：maximum-scale=20与maximum-scale=10的效果一样。</li>
+<li>安卓WebKit不支持minimum-scale；它的缩放范围是4（25%~400%）并且不支持改变范围。</li>
+<li>IE可能没有正确工作。</li>
+</ul>
+<h3 id="@viewport_u548CIE"><a href="#@viewport_u548CIE" class="headerlink" title="@viewport和IE"></a>@viewport和IE</h3><ul>
+<li>IE只在手机上支持meta视口标签，而在平板上不支持。</li>
+<li>下面的代码可以使你的布局视口尺寸等于真正的理想视口：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">-ms-viewport</span> </span>&#123;</span><br><span class="line">    <span class="tag">width</span><span class="pseudo">:device-width</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/移动端/" rel="tag">#移动端</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/29/fullpage-movejs/" rel="next" title="FullPage+Move.js实现整屏切换及动效">
+                <i class="fa fa-chevron-left"></i> FullPage+Move.js实现整屏切换及动效
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/mobile_or_PC/" rel="prev" title="判断手机/PC并执行不同的事件">
+                判断手机/PC并执行不同的事件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/photo.jpg" alt="Li XiaoFeng" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Li XiaoFeng</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">个人博客 学习总结 知识管理</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u7B2C_u4E00_u7AE0__u79FB_u52A8_u4E16_u754C"><span class="nav-number">1.</span> <span class="nav-text">第一章 移动世界</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u8FD0_u8425_u5546"><span class="nav-number">1.1.</span> <span class="nav-text">运营商</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u8FD0_u8425_u5546_u8865_u8D34"><span class="nav-number">1.1.1.</span> <span class="nav-text">运营商补贴</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u7B2C_u56DB_u7AE0__u89C6_u53E3"><span class="nav-number">2.</span> <span class="nav-text">第四章 视口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E09_u4E2A_u89C6_u53E3"><span class="nav-number">2.1.</span> <span class="nav-text">三个视口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5E03_u5C40_u89C6_u53E3"><span class="nav-number">2.1.1.</span> <span class="nav-text">布局视口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u89C6_u89C9_u89C6_u53E3"><span class="nav-number">2.1.2.</span> <span class="nav-text">视觉视口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7406_u60F3_u89C6_u53E3"><span class="nav-number">2.1.3.</span> <span class="nav-text">理想视口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u54EA_u4E00_u4E2A_u89C6_u53E3"><span class="nav-number">2.1.4.</span> <span class="nav-text">哪一个视口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u89E3_u9898"><span class="nav-number">2.1.5.</span> <span class="nav-text">解题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7F29_u653E"><span class="nav-number">2.2.</span> <span class="nav-text">缩放</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7981_u6B62_u7F29_u653E"><span class="nav-number">2.2.1.</span> <span class="nav-text">禁止缩放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5206_u8FA8_u7387"><span class="nav-number">2.3.</span> <span class="nav-text">分辨率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7269_u7406_u5206_u8FA8_u7387"><span class="nav-number">2.3.1.</span> <span class="nav-text">物理分辨率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u8BBE_u5907_u50CF_u7D20_u6BD4"><span class="nav-number">2.3.2.</span> <span class="nav-text">设备像素比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dppx_u548Cdpi"><span class="nav-number">2.3.3.</span> <span class="nav-text">dppx和dpi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#meta_u89C6_u53E3"><span class="nav-number">2.4.</span> <span class="nav-text">meta视口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#width"><span class="nav-number">2.4.1.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-scale"><span class="nav-number">2.4.2.</span> <span class="nav-text">initial-scale</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B8C_u7F8E_u7684meta_u89C6_u53E3"><span class="nav-number">2.4.3.</span> <span class="nav-text">完美的meta视口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5E03_u5C40_u89C6_u53E3_u7684_u6700_u5C0F_u5BBD_u5EA6"><span class="nav-number">2.4.4.</span> <span class="nav-text">布局视口的最小宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimum-scale_u548Cmaximum-scale"><span class="nav-number">2.4.5.</span> <span class="nav-text">minimum-scale和maximum-scale</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#@viewport_u548CIE"><span class="nav-number">2.4.6.</span> <span class="nav-text">@viewport和IE</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+      <!-- <div class="DIY-disqus"> -->
+        <div id="disqus_thread"></div>
+      <!-- </div> -->
+    </main>
+    
+    
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li XiaoFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//cheerforme.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

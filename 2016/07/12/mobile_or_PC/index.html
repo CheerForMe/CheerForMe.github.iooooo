@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,移动端," />
+  <meta name="keywords" content="Javascript,前端,移动端," />
 
 
 
@@ -51,31 +51,16 @@
 
 
 
-<meta name="description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
+<meta name="description" content="判断是否是手机12345678910111213function isMobile()&amp;#123;    var sUserAgent = navigator.userAgent.toLowerCase(),        bIsIpad = sUserAgent.match(/ipad/i) == &quot;ipad&quot;,        bIsIphoneOs = sUserAgent.match(/ip">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用伪类:target实现选项卡效果">
-<meta property="og:url" content="http://cheerforme.github.io/2016/02/24/taeget_tab/index.html">
+<meta property="og:title" content="判断手机/PC并执行不同的事件">
+<meta property="og:url" content="http://cheerforme.github.io/2016/07/12/mobile_or_PC/index.html">
 <meta property="og:site_name" content="Cheer For Me">
-<meta property="og:description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
-<meta property="og:updated_time" content="2016-02-24T10:32:46.255Z">
+<meta property="og:description" content="判断是否是手机12345678910111213function isMobile()&amp;#123;    var sUserAgent = navigator.userAgent.toLowerCase(),        bIsIpad = sUserAgent.match(/ipad/i) == &quot;ipad&quot;,        bIsIphoneOs = sUserAgent.match(/ip">
+<meta property="og:updated_time" content="2016-07-12T07:59:49.688Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用伪类:target实现选项卡效果">
-<meta name="twitter:description" content="HTML&amp;lt;div class=&quot;tab-control&quot;&amp;gt;
-    &amp;lt;a href=&quot;#tab1&quot;&amp;gt;tab1&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab2&quot;&amp;gt;tab2&amp;lt;/a&amp;gt;
-    &amp;lt;a href=&quot;#tab3&quot;&amp;gt;tab3&amp;lt;/a&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;div class=&quot;tabs&quot;&amp;gt;">
+<meta name="twitter:title" content="判断手机/PC并执行不同的事件">
+<meta name="twitter:description" content="判断是否是手机12345678910111213function isMobile()&amp;#123;    var sUserAgent = navigator.userAgent.toLowerCase(),        bIsIpad = sUserAgent.match(/ipad/i) == &quot;ipad&quot;,        bIsIphoneOs = sUserAgent.match(/ip">
 
 
 
@@ -87,7 +72,7 @@
   };
 </script>
 
-  <title> 使用伪类:target实现选项卡效果 | Cheer For Me </title>
+  <title> 判断手机/PC并执行不同的事件 | Cheer For Me </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +222,7 @@
             
             
               
-                使用伪类:target实现选项卡效果
+                判断手机/PC并执行不同的事件
               
             
           </h1>
@@ -246,8 +231,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-24T18:32:46+08:00" content="2016-02-24">
-              2016-02-24
+            <time itemprop="dateCreated" datetime="2016-07-12T15:59:49+08:00" content="2016-07-12">
+              2016-07-12
             </time>
           </span>
 
@@ -256,8 +241,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
                   </a>
                 </span>
 
@@ -285,52 +270,18 @@
       
 
       
-        <span itemprop="articleBody"><h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tab-control"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab1"</span>&gt;</span>tab1<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab2"</span>&gt;</span>tab2<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#tab3"</span>&gt;</span>tab3<span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tabs"</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab1"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab2"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"tab3"</span> <span class="attr">class</span>=<span class="string">"tab"</span>&gt;</span>这是tab3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-</code></pre>
-<h5 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h5><pre><code class="css"><span class="selector-class">.tab-control</span> <span class="selector-tag">a</span>{
-    <span class="attribute">display</span>:inline-block;
-    <span class="attribute">text-decoration</span>:none;
-    <span class="attribute">color</span>:<span class="number">#FFF</span>;
-    <span class="attribute">height</span>:<span class="number">20px</span>;
-    <span class="attribute">width</span>:<span class="number">40px</span>;
-    <span class="attribute">text-align</span>:center;
-    <span class="attribute">line-height</span>:<span class="number">20px</span>;
-    <span class="attribute">background</span>:<span class="built_in">rgba</span>(<span class="number">70</span>,<span class="number">121</span>,<span class="number">189</span>,<span class="number">0.75</span>);
-}
-<span class="selector-class">.tab-control</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>{
-    <span class="attribute">background</span>:<span class="built_in">rgba</span>(<span class="number">70</span>,<span class="number">121</span>,<span class="number">189</span>,<span class="number">1</span>);
-}
-<span class="selector-class">.tabs</span>{
-    <span class="attribute">position</span>:relative;
-    <span class="attribute">border</span>:<span class="number">1px</span> solid red;
-    <span class="attribute">height</span>:<span class="number">200px</span>;
-    <span class="attribute">width</span>:<span class="number">135px</span>;
-    <span class="attribute">overflow</span>:hidden;
-}
-<span class="selector-class">.tab</span>{
-    <span class="attribute">height</span>:<span class="number">100%</span>;
-    <span class="attribute">width</span>:<span class="number">100%</span>;
-}
-<span class="selector-pseudo">:target</span>{
-    <span class="attribute">display</span>:block;
-}
-</code></pre>
-<h5 id="u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN"><a href="#u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN" class="headerlink" title="更多target的效果：MDN"></a>更多target的效果：<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3atarget" target="_blank" rel="external">MDN</a></h5></span>
+        <span itemprop="articleBody"><h3 id="u5224_u65AD_u662F_u5426_u662F_u624B_u673A"><a href="#u5224_u65AD_u662F_u5426_u662F_u624B_u673A" class="headerlink" title="判断是否是手机"></a>判断是否是手机</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isMobile</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> sUserAgent = navigator.userAgent.toLowerCase(),</span><br><span class="line">        bIsIpad = sUserAgent.match(<span class="regexp">/ipad/i</span>) == <span class="string">"ipad"</span>,</span><br><span class="line">        bIsIphoneOs = sUserAgent.match(<span class="regexp">/iphone os/i</span>) == <span class="string">"iphone os"</span>,</span><br><span class="line">        bIsMidp = sUserAgent.match(<span class="regexp">/midp/i</span>) == <span class="string">"midp"</span>,</span><br><span class="line">        bIsUc7 = sUserAgent.match(<span class="regexp">/rv:1.2.3.4/i</span>) == <span class="string">"rv:1.2.3.4"</span>,</span><br><span class="line">        bIsUc = sUserAgent.match(<span class="regexp">/ucweb/i</span>) == <span class="string">"ucweb"</span>,</span><br><span class="line">        bIsAndroid = sUserAgent.match(<span class="regexp">/android/i</span>) == <span class="string">"android"</span>,</span><br><span class="line">        bIsCE = sUserAgent.match(<span class="regexp">/windows ce/i</span>) == <span class="string">"windows ce"</span>,</span><br><span class="line">        bIsWM = sUserAgent.march(<span class="regexp">/windows mobile/i</span>) == <span class="string">"windows mobile"</span>,</span><br><span class="line">        bIsWebview = sUserAgent.match(<span class="regexp">/webview/i</span>) == <span class="string">"webview"</span>;</span><br><span class="line">    <span class="keyword">return</span> (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u5224_u65AD_u4F7F_u7528_u54EA_u79CD_u4E8B_u4EF6"><a href="#u5224_u65AD_u4F7F_u7528_u54EA_u79CD_u4E8B_u4EF6" class="headerlink" title="判断使用哪种事件"></a>判断使用哪种事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> touchStart, touchMove, touchEnd;</span><br><span class="line">touchStart = isMobile() ? <span class="string">"touchstart"</span> : <span class="string">"mousedown"</span>;</span><br><span class="line">touchMove = isMobile() ? <span class="string">"touchmove"</span> : <span class="string">"mousemove"</span>;</span><br><span class="line">touchEnd = isMobile() ? <span class="string">"touchend"</span> : <span class="string">"mouseup"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="u4E09_u79CD_u4E8B_u4EF6_u7684_u76F8_u5E94_u5904_u7406"><a href="#u4E09_u79CD_u4E8B_u4EF6_u7684_u76F8_u5E94_u5904_u7406" class="headerlink" title="三种事件的相应处理"></a>三种事件的相应处理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">touchstart:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e=e || <span class="built_in">window</span>.event; <span class="comment">//要判断使用哪种event</span></span><br><span class="line">    stopDefault(e);     <span class="comment">//不同的浏览器，阻止浏览器默认事件方法不同</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(isMobile())&#123;     <span class="comment">//如果是手机</span></span><br><span class="line">        <span class="keyword">var</span> touch=e.touches[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">this</span>.y1=touch.pageY</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.y1=e.pageY;   <span class="comment">//如果不是手机</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.y2=<span class="number">0</span>;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">touchmove:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e=e || <span class="built_in">window</span>.event;</span><br><span class="line">    stopDefault(e);</span><br><span class="line">    <span class="keyword">if</span>(isMobile())&#123;</span><br><span class="line">        <span class="keyword">var</span> touch=e.touches[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">this</span>.y2=touch.pageY;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.y2=e.pageY;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">touchend:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e=e || <span class="built_in">window</span>.event;</span><br><span class="line">    stopDefault(e);</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.y2==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> diffY=<span class="keyword">this</span>.y2-<span class="keyword">this</span>.y1;</span><br><span class="line">    <span class="keyword">if</span>(diffY&gt;<span class="number">50</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.doNext();</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(diffY&lt;-<span class="number">50</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.doPrev();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.y1=<span class="number">0</span>,</span><br><span class="line">    <span class="keyword">this</span>.y2=<span class="number">0</span>;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 阻止浏览器默认事件方法：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopDefault</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = e || <span class="built_in">window</span>.event;</span><br><span class="line">    <span class="keyword">if</span>(e.preventDefault)&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        e.returnValue = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
           
             <a href="/tags/前端/" rel="tag">#前端</a>
           
@@ -343,17 +294,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/24/media_queries/" rel="next" title="Web常用媒体查询">
-                <i class="fa fa-chevron-left"></i> Web常用媒体查询
+              <a href="/2016/07/12/mobile_web_handbook/" rel="next" title="移动Web手册笔记">
+                <i class="fa fa-chevron-left"></i> 移动Web手册笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/15/Project_ experience/" rel="prev" title="记录并感谢我涨的经验（持续更新）">
-                记录并感谢我涨的经验（持续更新） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,7 +414,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u66F4_u591Atarget_u7684_u6548_u679C_uFF1AMDN"><span class="nav-number">3.</span> <span class="nav-text">更多target的效果：MDN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5224_u65AD_u662F_u5426_u662F_u624B_u673A"><span class="nav-number">1.</span> <span class="nav-text">判断是否是手机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5224_u65AD_u4F7F_u7528_u54EA_u79CD_u4E8B_u4EF6"><span class="nav-number">2.</span> <span class="nav-text">判断使用哪种事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E09_u79CD_u4E8B_u4EF6_u7684_u76F8_u5E94_u5904_u7406"><span class="nav-number">3.</span> <span class="nav-text">三种事件的相应处理</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
