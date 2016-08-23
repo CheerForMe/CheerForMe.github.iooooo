@@ -1,0 +1,908 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="angularjs,javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+<meta name="description" content="AngularJSng-app
+这个元素和它里面的东西属于应用的一部分
+
+module
+用来把相关代码打包，放在一个名字里
+
+1// angular.module(&quot;模块名&quot;,[依赖的其他模块-参数是个数组-如果没有就写个空白数组])
+ng-app+module
+controller
+控制器
+用控制器给视图提供需要显示的数据
+
+1234var myApp = angular.module(&quot;myA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AngularJS">
+<meta property="og:url" content="http://cheerforme.github.io/2016/08/23/angularjs_nh/index.html">
+<meta property="og:site_name" content="Cheer For Me">
+<meta property="og:description" content="AngularJSng-app
+这个元素和它里面的东西属于应用的一部分
+
+module
+用来把相关代码打包，放在一个名字里
+
+1// angular.module(&quot;模块名&quot;,[依赖的其他模块-参数是个数组-如果没有就写个空白数组])
+ng-app+module
+controller
+控制器
+用控制器给视图提供需要显示的数据
+
+1234var myApp = angular.module(&quot;myA">
+<meta property="og:updated_time" content="2016-08-23T02:29:23.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AngularJS">
+<meta name="twitter:description" content="AngularJSng-app
+这个元素和它里面的东西属于应用的一部分
+
+module
+用来把相关代码打包，放在一个名字里
+
+1// angular.module(&quot;模块名&quot;,[依赖的其他模块-参数是个数组-如果没有就写个空白数组])
+ng-app+module
+controller
+控制器
+用控制器给视图提供需要显示的数据
+
+1234var myApp = angular.module(&quot;myA">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> AngularJS | Cheer For Me </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Cheer For Me</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to my Blog.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                AngularJS
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-08-23T10:29:23+08:00" content="2016-08-23">
+              2016-08-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/javascript/angularjs/" itemprop="url" rel="index">
+                    <span itemprop="name">angularjs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="AngularJS"><a href="#AngularJS" class="headerlink" title="AngularJS"></a>AngularJS</h1><h2 id="ng-app"><a href="#ng-app" class="headerlink" title="ng-app"></a>ng-app</h2><ul>
+<li>这个元素和它里面的东西属于应用的一部分</li>
+</ul>
+<h2 id="module"><a href="#module" class="headerlink" title="module"></a>module</h2><ul>
+<li>用来把相关代码打包，放在一个名字里</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// angular.module("模块名",[依赖的其他模块-参数是个数组-如果没有就写个空白数组])</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-01-MyApp.html" target="_blank" rel="external">ng-app+module</a></p>
+<h2 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h2><ul>
+<li>控制器</li>
+<li>用控制器给视图提供需要显示的数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"myApp"</span>,[]);    <span class="comment">// 定义一个模块</span></span><br><span class="line">myApp.controller(<span class="string">"UserController"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    <span class="comment">// 为模块绑定控制器</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-02-controller.html" target="_blank" rel="external">controller</a></p>
+<h2 id="24scope"><a href="#24scope" class="headerlink" title="$scope"></a>$scope</h2><ul>
+<li>在控制器与视图之间去交互数据</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">ng-controller</span>=<span class="value">"UserController"</span>&gt;</span></span><br><span class="line">    &#123;&#123; name &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.name &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.email &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="actionscript"></span><br><span class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"myApp"</span>,[]);</span><br><span class="line">myApp.controller(<span class="string">"UserController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span></span>&#123;</span><br><span class="line">    $scope.name = <span class="string">"lxf"</span>;</span><br><span class="line">    $scope.user = &#123; name: <span class="string">"wh"</span>&#125;;</span><br><span class="line">    $scope.user.email = <span class="string">"zacevelynn@163.com"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-03-$scope.html" target="_blank" rel="external">$scope</a></p>
+<h2 id="u5728_u63A7_u5236_u5668_u4E0A_u5B9A_u4E49_u65B9_u6CD5"><a href="#u5728_u63A7_u5236_u5668_u4E0A_u5B9A_u4E49_u65B9_u6CD5" class="headerlink" title="在控制器上定义方法"></a>在控制器上定义方法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">ng-controller</span>=<span class="value">"UserController"</span>&gt;</span></span><br><span class="line">    &#123;&#123; name &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.name &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    &#123;&#123; user.email &#125;&#125;<span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    // 调用subscribe方法</span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">ng-click</span>=<span class="value">"user.subscribe()"</span>&gt;</span>点我<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"myApp"</span>,[]);</span><br><span class="line">myApp.controller(<span class="string">"UserController"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</span><br><span class="line">    $scope.name = <span class="string">"lxf"</span>;</span><br><span class="line">    $scope.user = &#123; name: <span class="string">"wh"</span>&#125;;</span><br><span class="line">    $scope.user.email = <span class="string">"zacevelynn@163.com"</span>;</span><br><span class="line">    <span class="comment">// 定义一个方法</span></span><br><span class="line">    $scope.user.subscribe = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log($scope.user.name + $scope.user.email);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-04-controller-Method.html" target="_blank" rel="external">控制器定义方法</a></p>
+<h2 id="u53CC_u8FB9_u6570_u636E_u7ED1_u5B9A"><a href="#u53CC_u8FB9_u6570_u636E_u7ED1_u5B9A" class="headerlink" title="双边数据绑定"></a>双边数据绑定</h2><ul>
+<li>Two-way data binding</li>
+<li>模型变化后会更新视图的显示，模型在视图上改变以后，也会更新模型</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-05-ngModel.html" target="_blank" rel="external">双边数据绑定</a></p>
+<h2 id="u6307_u4EE4_uFF1ADirectives"><a href="#u6307_u4EE4_uFF1ADirectives" class="headerlink" title="指令：Directives"></a>指令：Directives</h2><ul>
+<li>使用ng提供的或者自定义的指令来扩展html的功能</li>
+</ul>
+<h2 id="u663E_u793A_u6570_u636E_u5217_u8868_uFF1AngRepeat"><a href="#u663E_u793A_u6570_u636E_u5217_u8868_uFF1AngRepeat" class="headerlink" title="显示数据列表：ngRepeat"></a>显示数据列表：ngRepeat</h2><p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-06-ngRepeat.html" target="_blank" rel="external">ngRepeat</a></p>
+<h2 id="u52A8_u6001_u5E94_u7528css_u7C7B_uFF1AngClass"><a href="#u52A8_u6001_u5E94_u7528css_u7C7B_uFF1AngClass" class="headerlink" title="动态应用css类：ngClass"></a>动态应用css类：ngClass</h2><ul>
+<li>ng-class的值可以是：字符串、数组、对象</li>
+<li>值是对象时：key表示class类名，对应的值决定是否要添加class</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-07-ngClass.html" target="_blank" rel="external">ngClass</a></p>
+<h2 id="u52A8_u6001_u663E_u793A_u6216_u9690_u85CF_u5143_u7D20_uFF1AngShow/ngHide"><a href="#u52A8_u6001_u663E_u793A_u6216_u9690_u85CF_u5143_u7D20_uFF1AngShow/ngHide" class="headerlink" title="动态显示或隐藏元素：ngShow/ngHide"></a>动态显示或隐藏元素：ngShow/ngHide</h2><ul>
+<li>ngShow：true时显示，false时隐藏</li>
+<li>ngHide：true时隐藏，false时显示</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-08-ngShow+ngHide.html" target="_blank" rel="external">ngHide+ngShow</a></p>
+<h2 id="u8FC7_u6EE4_u5668_uFF1Afilter"><a href="#u8FC7_u6EE4_u5668_uFF1Afilter" class="headerlink" title="过滤器：filter"></a>过滤器：filter</h2><ul>
+<li>格式化数据的工具</li>
+</ul>
+<h2 id="u65E5_u671F_uFF1Adate"><a href="#u65E5_u671F_uFF1Adate" class="headerlink" title="日期：date"></a>日期：date</h2><ul>
+<li>date</li>
+<li>date:”short”</li>
+<li>date:”longDate”</li>
+<li>date:”shortTime”</li>
+<li>自定义:”yyyy-MM-dd, HH:mm:ss”</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>过滤器</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td>Feb 14, 2009</td>
+</tr>
+<tr>
+<td>date:”short”</td>
+<td>2/14/09 7:31 AM</td>
+</tr>
+<tr>
+<td>date:”longDate”</td>
+<td>February 14, 2009</td>
+</tr>
+<tr>
+<td>date:”shortTime”</td>
+<td>7:31 AM</td>
+</tr>
+<tr>
+<td>date:”yyyy-MM-dd, HH:mm:ss”</td>
+<td>2009-02-14, 07:31:30</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-09-Date.html" target="_blank" rel="external">Date</a></p>
+<h2 id="u9650_u5236_u6570_u91CF_uFF1AlimitTo"><a href="#u9650_u5236_u6570_u91CF_uFF1AlimitTo" class="headerlink" title="限制数量：limitTo"></a>限制数量：limitTo</h2><ul>
+<li>限制字符串显示的字符数</li>
+<li>限制数组显示出来的项目数</li>
+<li>limitTo:数量</li>
+<li>数量是负数时，从最后一个开始倒数</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-10-limitTo.html" target="_blank" rel="external">limitTo</a></p>
+<h2 id="u8FC7_u6EE4_uFF1Afilter"><a href="#u8FC7_u6EE4_uFF1Afilter" class="headerlink" title="过滤：filter"></a>过滤：filter</h2><ul>
+<li>在一个列表里找到包含特定内容的项目</li>
+<li>值可以是字符串、对象</li>
+<li>字符串：会找出包含这个字符串的项目</li>
+<li>对象：key是过滤的属性名，值是查找的内容<code>filter:{title:&quot;game&quot;}</code></li>
+<li><code>filter:{rate:9}:comparator</code>过滤+方法结合</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-11-filter.html" target="_blank" rel="external">filter</a></p>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-12-filter+method.html" target="_blank" rel="external">filter method</a></p>
+<h2 id="u8868_u5355_uFF1AForm"><a href="#u8868_u5355_uFF1AForm" class="headerlink" title="表单：Form"></a>表单：Form</h2><ul>
+<li>angular中form标签会创建一个NgModelController的实例，可以解析、格式化、验证表单</li>
+<li>会跟踪所有属于它的表单元素</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "$error":&#123;&#125;,  //错误信息</span><br><span class="line">    "$name": "userForm",  //表单名称</span><br><span class="line">    "$dirty": false,  //表单是否被操作过，没有时是false</span><br><span class="line">    "$pristine":true,  //表单没有被操作过的话，是true</span><br><span class="line">    "$valid": true,  //表单是否有效，当表单验证错误时，是false</span><br><span class="line">    "$invalid": false,  //当表单验证错误时，是true</span><br><span class="line">    "$submitted": false  //表单提交后会变true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-13-form.html" target="_blank" rel="external">form</a></p>
+<h3 id="u6DFB_u52A0_u8868_u5355_u5143_u7D20"><a href="#u6DFB_u52A0_u8868_u5355_u5143_u7D20" class="headerlink" title="添加表单元素"></a>添加表单元素</h3><p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-14-addForm.html" target="_blank" rel="external">表单元素</a></p>
+<h2 id="u8868_u5355_u72B6_u6001class"><a href="#u8868_u5355_u72B6_u6001class" class="headerlink" title="表单状态class"></a>表单状态class</h2><ul>
+<li>angular提供了一些和表单状态相关的css类</li>
+</ul>
+<h2 id="u8868_u5355_u9A8C_u8BC1"><a href="#u8868_u5355_u9A8C_u8BC1" class="headerlink" title="表单验证"></a>表单验证</h2><ul>
+<li>允许用html5的验证属性来验证表单，例如required、min-length、max-length、email、number等</li>
+<li>form标签添加novalidate属性，用来关闭浏览器本身的验证功能</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-15-FormValidation.html" target="_blank" rel="external">表单验证</a></p>
+<h2 id="u9A8C_u8BC1_u89C4_u5219"><a href="#u9A8C_u8BC1_u89C4_u5219" class="headerlink" title="验证规则"></a>验证规则</h2><h2 id="u81EA_u5B9A_u4E49_u9519_u8BEF_u63D0_u793A"><a href="#u81EA_u5B9A_u4E49_u9519_u8BEF_u63D0_u793A" class="headerlink" title="自定义错误提示"></a>自定义错误提示</h2><ul>
+<li>ng-if</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-16-FormRequired.html" target="_blank" rel="external">自定义错误提示</a></p>
+<h2 id="u670D_u52A1_uFF1Aservice"><a href="#u670D_u52A1_uFF1Aservice" class="headerlink" title="服务：service"></a>服务：service</h2><ul>
+<li>为应用里其他的组件，提供可以重复使用的功能</li>
+<li>组件：指令、控制器、服务…</li>
+<li>angular只创建一个服务的实例</li>
+</ul>
+<h2 id="u81EA_u5B9A_u4E49_u670D_u52A1"><a href="#u81EA_u5B9A_u4E49_u670D_u52A1" class="headerlink" title="自定义服务"></a>自定义服务</h2><ul>
+<li>.factory(“服务名”, function(){})</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-17-Service.html" target="_blank" rel="external">自定义服务</a></p>
+<h2 id="24log"><a href="#24log" class="headerlink" title="$log"></a>$log</h2><ul>
+<li>在控制台显示信息</li>
+<li>$log.log()：输入日志相关的信息</li>
+<li>$log.info()：信息类的内容</li>
+<li>$log.warn()：警告</li>
+<li>$log.error()：错误信息</li>
+<li>$log.debug():调试信息</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-18-$log.html" target="_blank" rel="external">$log</a></p>
+<h2 id="u5173_u95ED_24log_u7684_u8C03_u8BD5_u4FE1_u606F"><a href="#u5173_u95ED_24log_u7684_u8C03_u8BD5_u4FE1_u606F" class="headerlink" title="关闭$log的调试信息"></a>关闭$log的调试信息</h2><ul>
+<li>通过.config()配置</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-19-close$log.html" target="_blank" rel="external">关闭$log</a></p>
+<h2 id="24timeout"><a href="#24timeout" class="headerlink" title="$timeout"></a>$timeout</h2><ul>
+<li>在指定的时间过后执行某个动作</li>
+<li>第一个参数：要执行的动作，函数/方法</li>
+<li>第二个参数：倒计时时间，单位毫秒</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-20-$timeout.html" target="_blank" rel="external">$timeout</a></p>
+<h2 id="u53D6_u6D88_24timeout"><a href="#u53D6_u6D88_24timeout" class="headerlink" title="取消$timeout"></a>取消$timeout</h2><ul>
+<li>$timeout.cancel();</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-21-close_$timeout.html" target="_blank" rel="external">取消$timeout</a></p>
+<h2 id="24q"><a href="#24q" class="headerlink" title="$q"></a>$q</h2><ul>
+<li>在应用里使用异步的功能</li>
+<li>用到deferred和promise</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-22-$q.html" target="_blank" rel="external">$q</a></p>
+<h3 id="24q_u63D0_u4F9B_u7684_u4E1C_u897F"><a href="#24q_u63D0_u4F9B_u7684_u4E1C_u897F" class="headerlink" title="$q提供的东西"></a>$q提供的东西</h3><h2 id="u4F7F_u7528promise"><a href="#u4F7F_u7528promise" class="headerlink" title="使用promise"></a>使用promise</h2><ul>
+<li>有些服务会自动返回promise</li>
+<li><p>有时需要整合第三方插件，如果需要异步处理这些功能的话，需要创建promise</p>
+</li>
+<li><p><strong>then()：第一个参数决定要做的事，第二个参数是处理问题的函数</strong></p>
+</li>
+</ul>
+<h2 id="24http"><a href="#24http" class="headerlink" title="$http"></a>$http</h2><ul>
+<li>在angular中使用ajax的方法</li>
+<li>$http.get()获取</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-23-$http.html" target="_blank" rel="external">$http</a></p>
+<h2 id="controller_as_u8BED_u6CD5"><a href="#controller_as_u8BED_u6CD5" class="headerlink" title="controller as语法"></a>controller as语法</h2><ul>
+<li>控制器不需要注入$scope</li>
+<li>this指向该控制器</li>
+<li>ng-controller中控制器名称后面加as xxx</li>
+</ul>
+<p><a href="http://7xq3kn.com1.z0.glb.clouddn.com/study-24-controller_as.html" target="_blank" rel="external">controller as</a></p>
+<h2 id="u5B89_u5168_u7684_u4F9D_u8D56_u6CE8_u5165_u7684_u65B9_u6CD5"><a href="#u5B89_u5168_u7684_u4F9D_u8D56_u6CE8_u5165_u7684_u65B9_u6CD5" class="headerlink" title="安全的依赖注入的方法"></a>安全的依赖注入的方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"myApp"</span>,[]);</span><br><span class="line"><span class="comment">// 将注入和函数放在数组中，防止压缩js时angular无法识别</span></span><br><span class="line"><span class="comment">// 数组中的依赖注入的顺序要和函数中参数的顺序对应</span></span><br><span class="line">myApp.controller(<span class="string">"Test"</span>,[<span class="string">"$log"</span>,<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$log,$scope</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;]);</span><br></pre></td></tr></table></figure>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/angularjs/" rel="tag">#angularjs</a>
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/22/study_js/" rel="next" title="网易云课堂--JS">
+                <i class="fa fa-chevron-left"></i> 网易云课堂--JS
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/photo.jpg" alt="Li XiaoFeng" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Li XiaoFeng</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">个人博客 学习总结 知识管理</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AngularJS"><span class="nav-number">1.</span> <span class="nav-text">AngularJS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ng-app"><span class="nav-number">1.1.</span> <span class="nav-text">ng-app</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#module"><span class="nav-number">1.2.</span> <span class="nav-text">module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#controller"><span class="nav-number">1.3.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24scope"><span class="nav-number">1.4.</span> <span class="nav-text">$scope</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5728_u63A7_u5236_u5668_u4E0A_u5B9A_u4E49_u65B9_u6CD5"><span class="nav-number">1.5.</span> <span class="nav-text">在控制器上定义方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53CC_u8FB9_u6570_u636E_u7ED1_u5B9A"><span class="nav-number">1.6.</span> <span class="nav-text">双边数据绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6307_u4EE4_uFF1ADirectives"><span class="nav-number">1.7.</span> <span class="nav-text">指令：Directives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u663E_u793A_u6570_u636E_u5217_u8868_uFF1AngRepeat"><span class="nav-number">1.8.</span> <span class="nav-text">显示数据列表：ngRepeat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u52A8_u6001_u5E94_u7528css_u7C7B_uFF1AngClass"><span class="nav-number">1.9.</span> <span class="nav-text">动态应用css类：ngClass</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u52A8_u6001_u663E_u793A_u6216_u9690_u85CF_u5143_u7D20_uFF1AngShow/ngHide"><span class="nav-number">1.10.</span> <span class="nav-text">动态显示或隐藏元素：ngShow/ngHide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8FC7_u6EE4_u5668_uFF1Afilter"><span class="nav-number">1.11.</span> <span class="nav-text">过滤器：filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u65E5_u671F_uFF1Adate"><span class="nav-number">1.12.</span> <span class="nav-text">日期：date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u9650_u5236_u6570_u91CF_uFF1AlimitTo"><span class="nav-number">1.13.</span> <span class="nav-text">限制数量：limitTo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8FC7_u6EE4_uFF1Afilter"><span class="nav-number">1.14.</span> <span class="nav-text">过滤：filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8868_u5355_uFF1AForm"><span class="nav-number">1.15.</span> <span class="nav-text">表单：Form</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6DFB_u52A0_u8868_u5355_u5143_u7D20"><span class="nav-number">1.15.1.</span> <span class="nav-text">添加表单元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8868_u5355_u72B6_u6001class"><span class="nav-number">1.16.</span> <span class="nav-text">表单状态class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u8868_u5355_u9A8C_u8BC1"><span class="nav-number">1.17.</span> <span class="nav-text">表单验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u9A8C_u8BC1_u89C4_u5219"><span class="nav-number">1.18.</span> <span class="nav-text">验证规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u81EA_u5B9A_u4E49_u9519_u8BEF_u63D0_u793A"><span class="nav-number">1.19.</span> <span class="nav-text">自定义错误提示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u670D_u52A1_uFF1Aservice"><span class="nav-number">1.20.</span> <span class="nav-text">服务：service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u81EA_u5B9A_u4E49_u670D_u52A1"><span class="nav-number">1.21.</span> <span class="nav-text">自定义服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24log"><span class="nav-number">1.22.</span> <span class="nav-text">$log</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5173_u95ED_24log_u7684_u8C03_u8BD5_u4FE1_u606F"><span class="nav-number">1.23.</span> <span class="nav-text">关闭$log的调试信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24timeout"><span class="nav-number">1.24.</span> <span class="nav-text">$timeout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u53D6_u6D88_24timeout"><span class="nav-number">1.25.</span> <span class="nav-text">取消$timeout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24q"><span class="nav-number">1.26.</span> <span class="nav-text">$q</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#24q_u63D0_u4F9B_u7684_u4E1C_u897F"><span class="nav-number">1.26.1.</span> <span class="nav-text">$q提供的东西</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4F7F_u7528promise"><span class="nav-number">1.27.</span> <span class="nav-text">使用promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24http"><span class="nav-number">1.28.</span> <span class="nav-text">$http</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#controller_as_u8BED_u6CD5"><span class="nav-number">1.29.</span> <span class="nav-text">controller as语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u5168_u7684_u4F9D_u8D56_u6CE8_u5165_u7684_u65B9_u6CD5"><span class="nav-number">1.30.</span> <span class="nav-text">安全的依赖注入的方法</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+      <!-- <div class="DIY-disqus"> -->
+        <div id="disqus_thread"></div>
+      <!-- </div> -->
+    </main>
+    
+    
+    
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Li XiaoFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+    
+
+  
+
+
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//cheerforme.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
